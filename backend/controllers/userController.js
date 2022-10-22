@@ -1,32 +1,23 @@
-const User = require('../models/UserModel')
+const User = require('../models/userModel')
 
-// get all users
+// login user
+const loginUser = async (req, res) => {
+    res.json({mssg: 'login user'})
+}
 
+// signup user
+const signupUser = async (req, res) => {
+    const {email, password} = req.body
 
-// get a single user
-
-
-// create a new user
-const createWorkout = async (req, res) => {
-    const {name, email} = req.body
-
-    // add doc to db
     try {
-        const user = await User.create({name, email})
-        res.status(200).json(user)
+        const user = await User.signup(email,password)
+
+        res.status(200).json({email, user})
     } catch (error) {
         res.status(400).json({error: error.message})
     }
+
+    res.json({mssg: 'signup user'})
 }
 
-
-// delete an user
-
-
-// update an user
-
-
-
-module.exports = {
-    createWorkout
-}
+module.exports = { signupUser, loginUser}
