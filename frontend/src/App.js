@@ -1,9 +1,10 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // pages & components
 import Login from './pages/Login'
 import Signup from './pages/Signup';
-
+import './index.css';
 
 function App() {
   return (
@@ -20,6 +21,19 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+      <header className="App-header">
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
