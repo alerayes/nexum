@@ -28,7 +28,7 @@ const Header = () => {
             </div>
 
         </header>
-        <h1>Header fle</h1>
+        <h1>Header file</h1>
         </>
     );
 }
