@@ -1,17 +1,18 @@
 import './index.css';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Landing from './pages/landingPage'
 
+
 // pages & components
-//import Login from './pages/Login'
-//import Signup from './pages/Signup';
+import Login from './pages/Login'
+import Signup from './pages/Signup';
 
 
 function App() {
   return (
     <div className="App">
       { <BrowserRouter>
-        {/* { <Routes>
+        { <Routes>
           <Route 
             path="/login"
             element={<Login />}
@@ -20,7 +21,7 @@ function App() {
             path="/signup"
             element={<Signup />}
           />
-        </Routes>} */}
+        </Routes>}
         <Landing />
       </BrowserRouter>}
       <header className="App-header">

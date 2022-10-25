@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/** SignUp **/
+.signUpHeader{
+  text-align: center;
+}
+.formSection{
+  max-width: 800px;
+  margin: 0 auto;
+  background:#fff; 
+  box-shadow: 2px 2px 2px 1px rgba(122, 120, 120, 0.2);
+}
+.formSection  input{
+  width:100%;
+  border:0;
+}
+.formSection fieldset{
+   border-radius: 5px;
+   margin:30px 0px;
+}
+.logo-area{
+  width: 100%;
+  display: flex;
+  align-self: center;
+  padding: 5rem 0rem;
+}
+
+.signup-logo{
+  margin:0 auto;
+  width:10%;
+  
+}
+.main-signup{
+  background-color: rgb(245,247,249);
+  height:100vh;
+}
+.signupFollowUp {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+} 
+
+.signupFollowUp span { 
+   background:#fff; 
+   padding:0 10px; 
+}
+.form-group{
+  max-width: 500px;
+  margin:0 auto;
+  background:#fff; 
+
+  padding: 2rem;
+}
