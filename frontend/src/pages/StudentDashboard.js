@@ -4,14 +4,15 @@ import Avatar from '../assets/Avatar_Default.png'
 const StudentDashboard = () => {
     return ( 
         <>
-        <Header>
+        <div className='header-area'> 
             <img src={LogoIcon} alt="logo" />
             <div className="avatar">
                 <img src={Avatar} alt="default avatar" />
             </div>
-        </Header>
+        </div>
         
         </>
+    
      );
 }
  
