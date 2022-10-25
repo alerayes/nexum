@@ -1,16 +1,17 @@
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './index.css';
+import { BrowserRouter } from 'react-router-dom'
+import Landing from './pages/landingPage'
 
 // pages & components
-import Login from './pages/Login'
-import Signup from './pages/Signup';
-import './index.css';
+//import Login from './pages/Login'
+//import Signup from './pages/Signup';
+
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
+      { <BrowserRouter>
+        {/* { <Routes>
           <Route 
             path="/login"
             element={<Login />}
@@ -19,21 +20,13 @@ function App() {
             path="/signup"
             element={<Signup />}
           />
-        </Routes>
-      </BrowserRouter>
+        </Routes>} */}
+        <Landing />
+      </BrowserRouter>}
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
       </header>
+      
     </div>
   );
 }
