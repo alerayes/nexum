@@ -24,6 +24,7 @@ code {
 .formSection  input{
   width:100%;
   border:0;
+  font-size:20px;
 }
 .formSection fieldset{
    border-radius: 5px;
@@ -64,3 +65,69 @@ code {
 
   padding: 2rem;
 }
+
+/** Student Dashboard **/
+
+.logo-SDashboard{
+  border:1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(41,57,79);
+}
+
+.img-avatar{
+  border-radius:50%;
+  height:10vh;
+
+  padding: 0.5rem;
+}
+.img-logo{
+  width:20%;
+}
+.main-studentdashbaord{
+  display: flex;
+  height:100vh;
+  padding: 0;
+  margin: 0;
+}
+.nav-detail{
+  width: 19.9%;
+  background-color: rgb(41,57,79);
+  margin: 0;
+}
+.alumni-list{
+  padding: 1rem 3rem;
+  flex-grow: 1;
+}
+.alumni-list h1{
+  font-size:50px;
+}
+.search-list{
+  display: flex;
+  justify-content: space-between;
+}
+.search-list input{
+  flex-grow: 1;
+  font-size: 30px;
+}
+hr{
+  margin: 2rem 0rem;
+}
+.nav-detail nav ul li{
+  list-style-type: none;
+  color:white;
+  padding: 1rem;
+  font-size:25px;
+}
+.alumni-list button{
+  width:20%;
+  height:50px;
+  color:white;
+  background-color: rgb(41,57,79);
+  margin-left:20px;
+  font-weight:bold;
+  font-size:15px;
+
+}
+

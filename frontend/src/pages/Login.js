@@ -1,4 +1,5 @@
 import { useState } from "react"
+//import StudentDashboard from '../pages/StudentDashboard'
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -11,6 +12,7 @@ const Login = () => {
     }
 
     return (
+        <>
         <form onSubmit={handleSubmit}>
             <h3>Log in</h3>
 
@@ -30,6 +32,9 @@ const Login = () => {
 
             <button>Log in</button>
         </form>
+        
+        
+        </>
     )
 }
 

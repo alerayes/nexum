@@ -15,11 +15,13 @@ const Landing = () => {
                 <Link to="/"> Our Team </Link>
                 <Link to="/"> Contact </Link>
                 <Link to="/login"><button>Login</button></Link>
-                //<Link to="/signup"><button>Sign Up</button></Link>
+                <Link to="/signup"><button>Sign Up</button></Link>
             </div>
         </header>
+        
+        {/* Commented by bhanuj nagpal, because it is creating error while compiling */}
 
-        <footer>
+        {/* <footer>
             <div className="landingFooter">
 
                 <div>
@@ -48,7 +50,9 @@ const Landing = () => {
                     </form>
                 </div>
             </div>
-        </footer>
+        </footer> */}
+
+        
 
     </body>
     )
