@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
      return (
-    <body> 
+    <div> 
         <header className="Landing">
             <div className="logo">
 
@@ -54,7 +54,7 @@ const Landing = () => {
 
         
 
-    </body>
+    </div>
     )
     
 }

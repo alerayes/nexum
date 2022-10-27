@@ -6,13 +6,14 @@ import Landing from './pages/landingPage'
 // pages & components
 import Login from './pages/Login'
 import Signup from './pages/Signup';
+import StudentDashboard from './pages/StudentDashboard';
 
 
 function App() {
   return (
     <div className="App">
       { <BrowserRouter>
-        { <Routes>
+        <Routes>
           <Route 
             path="/login"
             element={<Login />}
@@ -21,12 +22,15 @@ function App() {
             path="/signup"
             element={<Signup />}
           />
-        </Routes>}
+          <Route path="/dashboard/*" element={<StudentDashboard/>} />
+  
+        </Routes>
         <Landing />
       </BrowserRouter>}
       <header className="App-header">
       
       </header>
+    
       
     </div>
   );
