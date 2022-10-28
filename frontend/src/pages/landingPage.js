@@ -21,7 +21,7 @@ const Landing = () => {
         
         {/* Hero */}
 
-        <section className="hero">
+        {/* <section className="hero">
             <div className="content">
                 <h1 className="hero_title">
                 
@@ -90,7 +90,7 @@ const Landing = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
     )  
 }
