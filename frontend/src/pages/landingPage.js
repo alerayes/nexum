@@ -19,9 +19,50 @@ const Landing = () => {
             </div>
         </header>
         
-        {/* Commented by bhanuj nagpal, because it is creating error while compiling */}
+        {/* Hero */}
 
-        {/* <footer>
+        <section className="hero">
+            <div className="content">
+                <h1 className="hero_title">
+                
+                </h1>
+                    
+                <h2 className="subtitle">
+                
+                </h2>
+            </div>
+        </section>
+
+       
+        <h2> Main Features </h2> 
+        <div className="columns">
+            <div className="column">
+                <h3>Feature 1</h3>
+            </div>
+                <img src={photo} alt="Feature 1" />
+            <div className="column">
+                
+            </div>
+
+            <div className="column">
+            <img src={photo} alt="Feature 2" />
+            </div>
+
+            <div className="column">
+                <h3>Feature 2</h3>
+            </div>
+
+            <div className="column">
+                <h3>Feature 3</h3>
+            </div>
+
+            <div className="column">
+            <img src={photo} alt="Feature 3" />
+            </div>
+        </div>
+        
+
+        <div className="footer">
             <div className="landingFooter">
 
                 <div>
@@ -33,30 +74,25 @@ const Landing = () => {
 
                 <div>
                     <form onSubmit={handleSubmit}>
-
-                        <label>First Name*</label><br>
+                        <label>First Name*</label>
                         <input type="text" onChange={(e) => setfName(e.target.value)} value={fName}/>
-
-                        <label>Last Name*</label><br>
-                        <input type="text" onChange={(e) => setlName(e.target.value)} value={lName}/>
-
-                        <label>Email:</label><br>
-                        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
                         
+                        <label>Last Name*</label>
+                        <input type="text" onChange={(e) => setlName(e.target.value)} value={lName}/>
+                        
+                        <label>Email:</label>
+                        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
+
                         <textarea rows="4" cols="50" name="comment" form="usrform">
                         </textarea>
-                        
+
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
             </div>
-        </footer> */}
-
-        
-
+        </div>
     </div>
-    )
-    
+    )  
 }
  
 export default Landing;
