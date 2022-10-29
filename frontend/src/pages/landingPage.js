@@ -39,13 +39,13 @@ const Landing = () => {
             <div className="column">
                 <h3>Feature 1</h3>
             </div>
-                <img src={photo} alt="Feature 1" />
+                <img src="" alt="Feature 1" />
             <div className="column">
                 
             </div>
 
             <div className="column">
-            <img src={photo} alt="Feature 2" />
+            <img src="" alt="Feature 2" />
             </div>
 
             <div className="column">
@@ -57,10 +57,56 @@ const Landing = () => {
             </div>
 
             <div className="column">
-            <img src={photo} alt="Feature 3" />
+                <img src="" alt="Feature 3" />
             </div>
         </div>
         
+        <div>
+            <div>
+                <div>
+                    <h3>Increase your Network in your University</h3>
+                </div>
+                <div>
+                    <Link to="/login"><button>Login</button></Link>
+                </div>
+            </div>
+            
+            <h3></h3>
+
+            <div>
+                <div className="column">
+                    <img src="" alt="Feature 3" />
+                </div>
+
+                <div className="column">
+                    <img src="" alt="Feature 3" />
+                </div>
+
+                <div className="column">
+                    <img src="" alt="Feature 3" />
+                </div>
+            </div>
+
+            <div>
+                <div className="column">
+                    <img src="" alt="" />
+                </div>
+
+                <div className="column">
+                    <img src="" alt="" />
+                </div>
+
+                <div className="column">
+                    <img src="" alt="" />
+                </div>
+
+                <div className="column">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            
+            
+        </div>
 
         <div className="footer">
             <div className="landingFooter">
@@ -75,13 +121,13 @@ const Landing = () => {
                 <div>
                     <form onSubmit={handleSubmit}>
                         <label>First Name*</label>
-                        <input type="text" onChange={(e) => setfName(e.target.value)} value={fName}/>
+                        <input type="text"/>
                         
                         <label>Last Name*</label>
-                        <input type="text" onChange={(e) => setlName(e.target.value)} value={lName}/>
+                        <input type="text"/>
                         
                         <label>Email:</label>
-                        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
+                        <input type="email"/>
 
                         <textarea rows="4" cols="50" name="comment" form="usrform">
                         </textarea>
@@ -90,8 +136,9 @@ const Landing = () => {
                     </form>
                 </div>
             </div>
-        </div> */}
+        </div>*/}
     </div>
+
     )  
 }
  
