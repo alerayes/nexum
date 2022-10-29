@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useSignup } from "../hooks/useSignup"
-import LogoIcon from '../assets/nexum_logo.png'
+import LogoIcon from '../assets/nexum_logo_white.png'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
     const [email, setEmail] = useState('')
@@ -20,8 +21,8 @@ const Signup = () => {
         <>
         <div className="main-signup">
             <div className="logo-area">
-        <img className="signup-logo"src={LogoIcon} alt="Logo" />
-        </div>
+                <img className="signup-logo"src={LogoIcon} alt="Logo" />
+            </div>
         <form className="formSection" onSubmit={handleSubmit}>
             <div className="form-group">
             <h1 className="signUpHeader">Create Your Account</h1>
@@ -59,10 +60,12 @@ const Signup = () => {
                 value={confirmPassword}
             />
             </fieldset>
-
+            <div className="button-login">
             <button disabled={isLoading}>Sign up</button>
+            </div>
+
             <h2 className="signupFollowUp"><span>Or</span></h2>
-            <p className="signUpHeader">Already have an account? <b>login</b></p>
+            <p className="signUpHeader">Already have an account? <Link to="/login"><span className="decoration"><b>login</b></span></Link></p>
             {error && <div>{error}</div>}
             </div>
         </form>

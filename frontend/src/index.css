@@ -11,6 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.signUpHeader a{
+  text-decoration: none;
+  color:black;
+}
+.button-login button{
+  max-width:30%;
+  height:50px;
+  border-radius: 10px;
+  flex-grow: 1;
+  margin-bottom: 10px;
+  color: white;
+  background-color: rgb(43,55,75);
+  border:none;
+}
+.button-login{
+  display: flex;
+  justify-content: center;
+  
+}
+/** Login **/
+.formSection-login{
+  max-width: 650px;
+  margin: 0 auto;
+  background:#fff; 
+  box-shadow: 2px 2px 2px 1px rgba(122, 120, 120, 0.2);
+}
+.formSection-login  input{
+  width:100%;
+  border:0;
+  font-size:20px;
+}
+.formSection-login fieldset{
+   border-radius: 5px;
+   margin:30px 0px;
+}
 /** SignUp **/
 .signUpHeader{
   text-align: center;
@@ -44,7 +80,7 @@ code {
 }
 .main-signup{
   background-color: rgb(245,247,249);
-  height:100vh;
+  height:125vh;
 }
 .signupFollowUp {
   width: 100%; 
