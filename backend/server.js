@@ -36,3 +36,5 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
+ // mongo db user password: h0EtsLkMQdjnisqI
+
