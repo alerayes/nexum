@@ -80,7 +80,7 @@ const UserSchema = new mongoose.Schema({
             default: 'n years'
         }
 
-    }]
+    }],
 })
 
 export default mongoose.model('User', UserSchema)
