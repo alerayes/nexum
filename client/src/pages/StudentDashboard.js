@@ -27,7 +27,7 @@ const StudentDashboard = () => {
             </div>
 
 <Routes>
-<Route element={<h1>Dashboard</h1>} 
+<Route element={<div className='student-dashboard-component'><h1>Dashboard</h1></div>} 
             path="/"
             />
                 <Route element={<AlumniList />}

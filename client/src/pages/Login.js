@@ -41,7 +41,7 @@ const Login = () => {
             />
             </fieldset>
             <div className="button-login">    
-                <button><b>Login</b></button>
+                <button className="login"><b>Login</b></button>
             </div>  
             <h2 className="signupFollowUp"><span>Or</span></h2>
             <p className="signUpHeader">Don't have an account? <Link to="/signup"><span className="decoration"><b>Sign Up</b></span></Link></p>
