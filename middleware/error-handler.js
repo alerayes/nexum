@@ -26,4 +26,3 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 export default errorHandlerMiddleware
 
 
-// Error handling code taken of John Smilga's course
