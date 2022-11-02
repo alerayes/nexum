@@ -22,7 +22,11 @@ import errorHandlerMiddleware from './middleware/error-handler.js'
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send('Welcome!')
+    res.json({msg:'WELCOME'})
+})
+
+app.get('/api/v1', (req, res) => {
+    res.json({msg: 'API'})
 })
 
 app.use('/api/v1/auth', authRouter)

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import LogoIcon from '../assets/nexum_logo_white.png'
 import { Link } from 'react-router-dom'
 //import StudentDashboard from '../pages/StudentDashboard'
@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()

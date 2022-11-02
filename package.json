@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server"
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \" npm run server \" \" npm run client\""
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "concurrently": "^7.5.0",
     "http-status-code": "^2.1.0"
   }
 }
