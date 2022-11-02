@@ -1,7 +1,7 @@
 import LogoIcon from '../assets/nexum_logo.png'
 import Avatar from '../assets/Avatar_D.png'
 import Footer from '../component/footer'
-import AlumniList from './AlumniList'
+import AlumniList from '../components/AlumniList'
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
 
 const StudentDashboard = () => {
@@ -26,8 +26,8 @@ const StudentDashboard = () => {
                 </nav>
             </div>
 
-<Routes>
-<Route element={<h1>Dashboard</h1>} 
+            <Routes>
+            <Route element={<h1>Dashboard</h1>} 
             path="/"
             />
                 <Route element={<AlumniList />}
