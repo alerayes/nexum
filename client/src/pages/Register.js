@@ -13,6 +13,10 @@ const initialState = {
 const Register = () => {
   const [values, setValues] = useState(initialState)
 
+  const toggleMember = () => {
+    setValues({...values, isMember: !values.isMember})
+  }
+
   const handleChange = (e) => {
     console.log(e.target)
   }
@@ -26,15 +30,19 @@ const Register = () => {
     //  Logo Here
     <div>
       <form className='register-form' onSubmit={onSubmit}>
-          <h3>Login</h3>
+          <h3>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
+          {!values.isMember && <p>Please insert your information and the password that was sent to you</p>}
           {values.showAlert && <Alert />}
           {/* Name Input */}
-          <FormRow 
+          
+          { !values.isMember && (
+            <FormRow 
             type='text'
             name='name'
             value={values.name}
             handleChange={handleChange}
           />
+          )}
 
           {/* Email Input */}
           <FormRow 
@@ -55,6 +63,14 @@ const Register = () => {
           <button type='submit'>
             Submit
           </button>
+
+          <p>
+            {values.isMember ? `Don't have an account yet?` : 'Already have an account?' }
+
+            <button type='button' onClick={toggleMember}>
+              {values.isMember ? 'Sign Up' : 'Login'}
+            </button>
+          </p>
       </form>
     </div>  
   )
