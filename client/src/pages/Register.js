@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FormRow } from '../components'
 
 const initialState = {
     name: '',
@@ -22,25 +23,38 @@ const Register = () => {
 
   return (
     //  Logo Here
-     <form className='register-form' onSubmit={onSubmit}>
-        <h3>Login</h3>
-        {/* Name field */}
-
-        <div className='form-row'>
-
-          <label htmlFor="name" className='form-label'>
-            Name
-          </label>
-          <input  
+    <div>
+      <form className='register-form' onSubmit={onSubmit}>
+          <h3>Login</h3>
+          {/* Name Input */}
+          <FormRow 
             type='text'
-            value={values.name}
             name='name'
-            onChange={handleChange}
-            className='form-input'
+            value={values.name}
+            handleChange={handleChange}
           />
 
-        </div>
-     </form>
+          {/* Email Input */}
+          <FormRow 
+            type='email'
+            name='email'
+            value={values.email}
+            handleChange={handleChange}
+          />
+
+          {/* Password Input */}
+          <FormRow
+            type='password'
+            name='password'
+            value={values.password}
+            handleChange={handleChange}
+          />
+
+          <button type='submit'>
+            Submit
+          </button>
+      </form>
+    </div>  
   )
 }
 
