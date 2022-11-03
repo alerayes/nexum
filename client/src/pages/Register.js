@@ -13,7 +13,7 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState)
-  const { user, isLoading, showAlert, displayAlert, registerUser } = UseAppContext()
+  const { user, isLoading, showAlert, displayAlert, registerUser, loginUser } = UseAppContext()
   const navigate = useNavigate()
 
   const toggleMember = () => {
@@ -36,7 +36,7 @@ const Register = () => {
     const currentUser = {name, email, password}
 
     if(isMember){
-      console.log('already a member')
+      loginUser(currentUser)
     }
     else{
       registerUser(currentUser)
@@ -55,7 +55,7 @@ const Register = () => {
 
   return (
     //  Logo Here
-    <div>
+    <div className='register-page'>
       <form className='register-form' onSubmit={onSubmit}>
           <h3>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
           {!values.isMember && <p>Please insert your information and the password that was sent to you</p>}

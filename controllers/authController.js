@@ -57,7 +57,7 @@ const login = async (req, res) => {
 
     res.status(StatusCodes.OK).json({user, token})
 
-    res.send('login user')
+    
 }
 
 const updateUser = async (req, res) => {
