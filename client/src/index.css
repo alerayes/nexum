@@ -187,8 +187,28 @@ hr{
 .alumni-list-detail > ul>li>div>h6{
   margin: 0;
 }
-.fb{
+.avatar-img-alumniList{
   flex-basis: 25%;
+}
+.fb{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+
+  justify-content: space-between;
+}
+.fb1{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+
+  justify-content: space-between;
+}
+.fb2{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  justify-content: center;
 }
 /** Footer **/
 

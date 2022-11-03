@@ -70,7 +70,7 @@ const Landing = () => {
                 </div>
             </div>
             
-            <h3></h3>
+            {/* <h3></h3> */}
 
             <div>
                 <div className="column">
@@ -152,7 +152,7 @@ const Landing = () => {
                 </div>
 
                 <div>
-                    <form onSubmit={handleSubmit}>
+                    {/* <form onSubmit={handleSubmit}>
                         <label>First Name*</label>
                         <input type="text"/>
                         
@@ -166,7 +166,7 @@ const Landing = () => {
                         </textarea>
 
                         <input type="submit" value="Submit" />
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </div>
