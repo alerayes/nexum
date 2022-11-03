@@ -1,29 +1,38 @@
 import { useState, useEffect } from 'react'
 import { FormRow, Alert } from '../components'
+import { UseAppContext } from '../context/appContext'
 
 const initialState = {
     name: '',
     email: '',
     password: '',
     isMember: true,
-    showAlert: true
 }
 
 
 const Register = () => {
   const [values, setValues] = useState(initialState)
+  const { isLoading, showAlert, displayAlert } = UseAppContext()
 
   const toggleMember = () => {
     setValues({...values, isMember: !values.isMember})
   }
 
   const handleChange = (e) => {
-    console.log(e.target)
+    setValues({...values, [e.target.name]: e.target.value})
   }
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(e.target)
+    
+    const { name, email, password, isMember } = values
+
+    if(!email || !password || (!isMember && !name)){
+      displayAlert() 
+      return
+    }
+
+    console.log(values)
   }
 
   return (
@@ -32,7 +41,7 @@ const Register = () => {
       <form className='register-form' onSubmit={onSubmit}>
           <h3>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
           {!values.isMember && <p>Please insert your information and the password that was sent to you</p>}
-          {values.showAlert && <Alert />}
+          {showAlert && <Alert />}
           {/* Name Input */}
           
           { !values.isMember && (
