@@ -16,7 +16,7 @@ code {
   text-decoration: none;
   color:black;
 }
-.button-login button{
+.button-login .login{
   max-width:30%;
   height:50px;
   border-radius: 10px;
@@ -111,15 +111,17 @@ code {
   align-items: center;
   background-color: rgb(41,57,79);
 }
-
+.student-dashboard-component{
+  flex-grow: 1;
+}
 .img-avatar{
   border-radius:50%;
-  height:10vh;
+  height:5vh;
 
   padding: 0.5rem;
 }
 .img-logo{
-  width:20%;
+  width:10%;
 }
 .main-studentdashbaord{
   display: flex;
@@ -135,6 +137,7 @@ code {
 .alumni-list{
   padding: 1rem 3rem;
   flex-grow: 1;
+  background: #F5F7F9;
 }
 .alumni-list h1{
   font-size:50px;
@@ -156,7 +159,7 @@ hr{
   padding: 1rem;
   font-size:25px;
 }
-.alumni-list button{
+.alumni-list .search{
   width:20%;
   height:50px;
   color:white;
@@ -165,6 +168,27 @@ hr{
   font-weight:bold;
   font-size:15px;
 
+}
+.alumni-list-button{
+  background: #AAF0D8;
+  border-radius: 6px;
+  padding: 12px 24px;
+}
+
+.alumni-avatar{
+  height:8vh;
+}
+.alumni-list-detail > ul>li{
+  display: flex;
+  background: white;
+  padding:1rem;
+  margin:1rem 0rem;
+}
+.alumni-list-detail > ul>li>div>h6{
+  margin: 0;
+}
+.fb{
+  flex-basis: 25%;
 }
 /** Footer **/
 
@@ -178,3 +202,4 @@ hr{
 .extra-div img{
   width:5%;
 }
+

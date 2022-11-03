@@ -15,13 +15,12 @@ const Landing = () => {
                 <Link to="/"> Our Team </Link>
                 <Link to="/"> Contact </Link>
                 <Link to="/login"><button>Login</button></Link>
-                <Link to="/signup"><button>Sign Up</button></Link>
             </div>
         </header>
         
         {/* Hero */}
 
-        {/* <section className="hero">
+        <section className="hero">
             <div className="content">
                 <h1 className="hero_title">
                 
@@ -45,7 +44,7 @@ const Landing = () => {
             </div>
 
             <div className="column">
-            <img src="" alt="Feature 2" />
+                <img src="" alt="Feature 2" />
             </div>
 
             <div className="column">
@@ -75,36 +74,70 @@ const Landing = () => {
 
             <div>
                 <div className="column">
-                    <img src="" alt="Feature 3" />
+                    <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
 
                 <div className="column">
-                    <img src="" alt="Feature 3" />
+                    <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
 
                 <div className="column">
-                    <img src="" alt="Feature 3" />
+                    <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
             </div>
 
             <div>
                 <div className="column">
                     <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
 
                 <div className="column">
                     <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
 
                 <div className="column">
                     <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
 
                 <div className="column">
                     <img src="" alt="" />
+                    <div className="devDetails">
+                        <h3>Name</h3>
+                        <h3>Position</h3>
+                        <h3>LinkedIn</h3>
+                    </div>
                 </div>
             </div>
-            
             
         </div>
 
@@ -119,7 +152,7 @@ const Landing = () => {
                 </div>
 
                 <div>
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <label>First Name*</label>
                         <input type="text"/>
                         
@@ -136,7 +169,7 @@ const Landing = () => {
                     </form>
                 </div>
             </div>
-        </div>*/}
+        </div>
     </div>
 
     )  

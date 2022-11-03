@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FormRow, Alert } from '../components'
 import { UseAppContext } from '../context/appContext'
 
@@ -12,7 +13,8 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState)
-  const { isLoading, showAlert, displayAlert } = UseAppContext()
+  const { user, isLoading, showAlert, displayAlert, registerUser } = UseAppContext()
+  const navigate = useNavigate()
 
   const toggleMember = () => {
     setValues({...values, isMember: !values.isMember})
@@ -31,9 +33,25 @@ const Register = () => {
       displayAlert() 
       return
     }
+    const currentUser = {name, email, password}
+
+    if(isMember){
+      console.log('already a member')
+    }
+    else{
+      registerUser(currentUser)
+    }
 
     console.log(values)
   }
+
+  useEffect( () => {
+    if(user) {
+      setTimeout(() => {
+        navigate('/')
+      }, 3000)
+    }
+  }, [user, navigate])
 
   return (
     //  Logo Here
@@ -69,7 +87,7 @@ const Register = () => {
             handleChange={handleChange}
           />
 
-          <button type='submit'>
+          <button type='submit' disabled={isLoading}>
             Submit
           </button>
 
