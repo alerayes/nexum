@@ -587,7 +587,7 @@ h3{
   margin: 0;
 }
 .nav-detail{
-  width: 19.9%;
+  flex-basis: 20%;
   background-color: rgb(41,57,79);
   margin: 0;
 }
@@ -679,4 +679,45 @@ hr{
 .extra-div img{
   width:5%;
 }
+ /** Job List Details **/
 
+ .jobList-detail >ul{
+  list-style-type: none;
+  padding: 0;
+ }
+ .jobList-detail >ul>li{
+  margin:1rem 0rem;
+ }
+.jobList-detail >ul>li>details>summary{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+}
+.jobList-detail >ul>li>details>p>hr{
+  margin: 0;
+}
+.companyDetail {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0rem 1rem; */
+}
+.descJob{
+  margin-bottom: 15px;
+}
+.jobSection{
+  padding: 1rem;
+  background: #D9E7E7;
+  border-radius: 0px 0px 8px 8px;
+  margin: 0;
+}
+.jobdescDetails{
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+.jobBoard-list-comp{
+  flex-basis:80%;
+}

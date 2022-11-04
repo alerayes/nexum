@@ -2,7 +2,7 @@ import Avatar from '../assets/Avatar_D.png'
 
 const AlumniList = () => {
     return (   
-    <>
+    
      <div className="alumni-list">
         <h1>Alumni List</h1>
         <div className="search-list">
@@ -79,11 +79,12 @@ const AlumniList = () => {
             </li>
             
         </ul>
+        
     </div>    
     </div>
     
-        </>
+        
     );
 }
  
-export default AlumniList;
+export default AlumniList
