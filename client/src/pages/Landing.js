@@ -152,7 +152,7 @@ const Landing = () => {
                 </div>
 
                 <div>
-                    {/* <form onSubmit={handleSubmit}>
+                    <form>
                         <label>First Name*</label>
                         <input type="text"/>
                         

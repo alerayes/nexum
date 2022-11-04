@@ -61,7 +61,7 @@ const Signup = () => {
             />
             </fieldset>
             <div className="button-login">
-            <button className="login" disabled={isLoading}>Sign up</button>
+            <button disabled={isLoading}>Sign up</button>
             </div>
 
             <h2 className="signupFollowUp"><span>Or</span></h2>
