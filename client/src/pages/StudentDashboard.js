@@ -36,7 +36,7 @@ const StudentDashboard = () => {
             <Route element={<h1>profile</h1>} 
             path="profile"
             />
-            <Route element={<h1>Job Board</h1>} 
+            <Route element={<Job />} 
             path="job-board"
             />
         
