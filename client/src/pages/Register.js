@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FormRow, Alert } from '../components'
+import { FormRow, Alert, Logo } from '../components'
 import { UseAppContext } from '../context/appContext'
 
 const initialState = {
@@ -54,52 +54,56 @@ const Register = () => {
   }, [user, navigate])
 
   return (
-    //  Logo Here
-    <div className='register-page'>
+    
+    <div className='register-main-container'>
+      <Logo />
       <form className='register-form' onSubmit={onSubmit}>
-          <h3>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
+          <h3 className='register-header'>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
           {!values.isMember && <p>Please insert your information and the password that was sent to you</p>}
           {showAlert && <Alert />}
           {/* Name Input */}
           
-          { !values.isMember && (
-            <FormRow 
-            type='text'
-            name='name'
-            value={values.name}
-            handleChange={handleChange}
-          />
-          )}
+          <div className="form-group">
+            { !values.isMember && (
+              <FormRow
+              type='text'
+              name='name'
+              value={values.name}
+              handleChange={handleChange}
+            />
+            )}
+            {/* Email Input */}
+            <FormRow
+              type='email'
+              name='email'
+              value={values.email}
+              handleChange={handleChange}
+            />
+            {/* Password Input */}
+            <FormRow
+              type='password'
+              name='password'
+              value={values.password}
+              handleChange={handleChange}
+            />
+            <div className="register-button-wrapper">
+              <button className='button-register' type='submit' disabled={isLoading}>
+                {values.isMember ? 'Login' : 'Sign Up'}
+              </button>
+            </div>
+            
+            <p>{values.isMember && 'Forgot your password?'}</p>
 
-          {/* Email Input */}
-          <FormRow 
-            type='email'
-            name='email'
-            value={values.email}
-            handleChange={handleChange}
-          />
-
-          {/* Password Input */}
-          <FormRow
-            type='password'
-            name='password'
-            value={values.password}
-            handleChange={handleChange}
-          />
-
-          <button type='submit' disabled={isLoading}>
-            Submit
-          </button>
-
-          <p>
-            {values.isMember ? `Don't have an account yet?` : 'Already have an account?' }
-
-            <button type='button' onClick={toggleMember}>
-              {values.isMember ? 'Sign Up' : 'Login'}
-            </button>
-          </p>
+            <p>
+              {values.isMember ? `Don't have an account yet?` : 'Already have an account?' }
+              <button className='register-toggle-button' type='button' onClick={toggleMember}>
+                {values.isMember ? 'Sign Up' : 'Login'}
+              </button>
+            </p>
+          </div>
       </form>
-    </div>  
+    </div> 
+    
   )
 }
 
