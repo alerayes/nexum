@@ -105,7 +105,6 @@ code {
 /** Student Dashboard **/
 
 .logo-SDashboard{
-  border:1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,6 +121,7 @@ code {
 }
 .img-logo{
   width:10%;
+  padding: 0rem 1rem;
 }
 .main-studentdashbaord{
   display: flex;
@@ -188,7 +188,7 @@ hr{
   margin: 0;
 }
 .avatar-img-alumniList{
-  flex-basis: 25%;
+  flex-basis: 20%;
 }
 .fb{
   display: flex;
