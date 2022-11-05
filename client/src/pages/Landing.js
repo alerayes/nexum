@@ -153,17 +153,24 @@ const Landing = () => {
 
                 <div className="whiteBg">
                     <form>
-                        <label>First Name*</label>
-                        <input type="text"/>
-                        
-                        <label>Last Name*</label>
-                        <input type="text"/>
-                        
-                        <label>Email:</label>
-                        <input type="email"/>
+                        <fieldset>
+                            <legend><label for="fname">First name*</label>
+                        </fieldset>
 
-                        <textarea rows="4" cols="50" name="comment" form="usrform">
-                        </textarea>
+                        <fieldset>
+                            <legend><label for="fname">Last name*</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><label for="fname">Email</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><label for="fname">Message</label>
+                        </fieldset>
+
+                        <!-- <textarea rows="4" cols="50" name="comment" form="usrform">
+                        </textarea> -->
 
                         <input type="submit" value="Submit" />
                     </form>
