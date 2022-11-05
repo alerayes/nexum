@@ -144,14 +144,14 @@ const Landing = () => {
         <div className="footer">
             <div className="landingFooter">
 
-                <div>
+                <div className="footerAbout">
                     <h2>Contact Nexum</h2>
                     <p>We're here to help and answer any questions you might
                         have. We look forward to hearing from you.
                     </p>
                 </div>
 
-                <div>
+                <div className="whiteBg">
                     <form>
                         <label>First Name*</label>
                         <input type="text"/>
@@ -166,7 +166,16 @@ const Landing = () => {
                         </textarea>
 
                         <input type="submit" value="Submit" />
-                    </form> */}
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div>
+                    <img src="" alt="Logo" />
+                </div>
+                <div>
+                    <p>Nexum 2022</p>
                 </div>
             </div>
         </div>
