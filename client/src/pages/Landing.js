@@ -1,5 +1,7 @@
 //import Header from '../component/header'
 import { Link } from 'react-router-dom'
+import LogoIcon from '../assets/nexum_logo.png'
+import Footer from '../component/footer'
 
 const Landing = () => {
      return (
@@ -179,7 +181,7 @@ const Landing = () => {
             <hr>
             <div>
                 <div>
-                    <img src="" alt="Logo" />
+                    <img className='img-logo' src={LogoIcon} alt="logo" />
                 </div>
                 <div>
                     <p>Nexum 2022</p>
