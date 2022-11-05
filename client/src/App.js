@@ -1,6 +1,7 @@
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {Register, StudentDashboard, Error,Landing} from './pages'
+//import AlumniList from './components/AlumniList.js'
 
 
 
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
           <Routes>
-            <Route path="/" element={<StudentDashboard/>}/>
+            <Route path="/dashboard/*" element={<StudentDashboard/>}/>
+            {/* <Route path="/alumni" element={<AlumniList/>} /> */}
             <Route path="/register" element={<Register/>}/>
             <Route path="/landing" element={<Landing/>} />
             <Route path="*" element={<Error/>}/>

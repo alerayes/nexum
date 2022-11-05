@@ -3,9 +3,12 @@ import Avatar from '../assets/Avatar_D.png'
 import Footer from '../component/footer'
 import AlumniList from '../components/AlumniList.js'
 import Job from '../components/JobBoard.js'
+import Maindashboard from '../components/Dashboard.js'
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
 
 const StudentDashboard = () => {
+    const data  = JSON.parse(localStorage.getItem('user'));
+
     return ( 
         <>
         <div className='header-area'> 
@@ -19,6 +22,7 @@ const StudentDashboard = () => {
             <div className="nav-detail">
                 <nav>
                     <ul>
+                        <li className='login-name'>{data.name}</li>  
                         <Link to="alumni"><li>Alumni List</li></Link>
                         <Link to="job-board"><li>Job Board</li></Link>
                         <Link to="profile"><li>Profile</li></Link>
@@ -28,7 +32,7 @@ const StudentDashboard = () => {
             </div>
 
             <Routes>
-            <Route element={<AlumniList />} 
+            <Route element={<Maindashboard />} 
             path="/"
             />
             {/* <Route element={<Job />} 
@@ -37,12 +41,12 @@ const StudentDashboard = () => {
             <Route element={<AlumniList />}
             path="alumni"
             />
-            <Route element={<h1>profile</h1>} 
-            path="profile"
+            <Route element={<Maindashboard />} 
+            path="/profile"
             />
-            {/* <Route element={<Job />} 
+            <Route element={<Job />} 
             path="job-board"
-            /> */}
+            />
         
             </Routes>
 
@@ -56,6 +60,7 @@ const StudentDashboard = () => {
     
      );
 };
+
 
 const TestComponent = () => {
     return (
