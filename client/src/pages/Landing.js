@@ -16,13 +16,13 @@ const Landing = () => {
                 <Link to="/"> Features </Link>
                 <Link to="/"> Our Team </Link>
                 <Link to="/"> Contact </Link>
-                <Link to="/login"><button>Login</button></Link>
+                <Link to="/register"><button>Login</button></Link>
             </div>
         </header>
         
         {/* Hero */}
 
-        <section className="hero">
+        {/* <section className="hero">
             <div className="content">
                 <h1 className="hero_title">
                 
@@ -60,9 +60,9 @@ const Landing = () => {
             <div className="column">
                 <img src="" alt="Feature 3" />
             </div>
-        </div>
+        </div> */}
         
-        <div>
+        {/* <div>
             <div>
                 <div>
                     <h3>Increase your Network in your University</h3>
@@ -72,7 +72,7 @@ const Landing = () => {
                 </div>
             </div>
             
-            {/* <h3></h3> */}
+           
 
             <div>
                 <div className="column">
@@ -141,9 +141,9 @@ const Landing = () => {
                 </div>
             </div>
             
-        </div>
+        </div> */}
 
-        <div className="footer">
+        {/* <div className="footer">
             <div className="landingFooter">
 
                 <div className="footerAbout">
@@ -187,7 +187,7 @@ const Landing = () => {
                     <p>Nexum 2022</p>
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
 
     )  
