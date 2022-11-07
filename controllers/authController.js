@@ -24,8 +24,9 @@ const register = async (req, res) => {
             user: {
                 email: user.email,
                 name: user.name,
-                education: user.education,
-                professionalExperience: user.professionalExperience
+                lastName: user.lastName,
+                institution: user.institution,
+                program: user.program,
             },
             token
         })
@@ -40,6 +41,7 @@ const login = async (req, res) => {
     }
 
     const user = await User.findOne({email}).select('+password')
+
     if(!user){
         throw new UnauthenticatedError('Invalid email')
     }
@@ -56,8 +58,6 @@ const login = async (req, res) => {
     user.password = undefined
 
     res.status(StatusCodes.OK).json({user, token})
-
-    
 }
 
 const updateUser = async (req, res) => {
@@ -68,7 +68,7 @@ const getAllUsers = async (req, res) => {
     
     const users = await User.find({})
 
-    res.status(200).json(users)
+    res.status(StatusCodes.OK).json(users)
 }
  
 export { register, login, updateUser, getAllUsers }
