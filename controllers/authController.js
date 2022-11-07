@@ -64,4 +64,11 @@ const updateUser = async (req, res) => {
     res.send('update user')
 }
 
-export { register, login, updateUser }
+const getAllUsers = async (req, res) => {
+    
+    const users = await User.find({})
+
+    res.status(200).json(users)
+}
+ 
+export { register, login, updateUser, getAllUsers }
