@@ -1,6 +1,7 @@
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import {Register, StudentDashboard, Error,Landing} from './pages'
+import {Register, StudentDashboard, Error,Landing, ProtectedRoute} from './pages'
+import {JobBoard, StudentList, Profile, SharedLayout} from './pages/dashboard'
 
 
 
@@ -9,7 +10,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
           <Routes>
-            <Route path="/dashboard/*" element={<StudentDashboard/>}/>
+            <Route 
+              path='/' 
+              element={
+                <ProtectedRoute>
+                  <SharedLayout/>
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<StudentList/>}/>
+              <Route path='job-board' element={<JobBoard/>}/>
+              <Route path='profile' element={<Profile/>}/>
+            </Route>
             <Route path="/register" element={<Register/>}/>
             <Route path="/landing" element={<Landing/>} />
             <Route path="*" element={<Error/>}/>
