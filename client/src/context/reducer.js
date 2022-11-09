@@ -6,7 +6,9 @@ import { DISPLAY_ALERT,
          LOGIN_USER_BEGIN,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
+         LOGOUT_USER
      } from "./actions"
+import { initialState } from './appContext'
 
 const reducer = (state, action) => {
 
@@ -76,6 +78,14 @@ const reducer = (state, action) => {
             showAlert: true,
             alertType: 'error',
             alertText: action.payload.msg,
+        }
+    }
+
+    if(action.type === LOGOUT_USER){
+        return{
+            ...initialState,
+            user: null,
+            token: null,
         }
     }
 

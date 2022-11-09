@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { FaUserCircle, FaCaretDown } from 'react-icons/fa'
-import { useAppContext } from '../context/appContext'
+import { UseAppContext } from '../context/appContext'
+
 
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(true)
+  const { user, logoutUser} = UseAppContext()
+
   
   return (
     <div className="navbar-container">
@@ -14,13 +17,13 @@ const Navbar = () => {
           onClick={() => setShowLogout(!showLogout)}
         >
             <FaUserCircle/>
-            Ale 
+             {user && user.name}
             <FaCaretDown/> 
         </button>
         <div className={showLogout ? 'navbar-dropdown' : 'show-navbar-dropdown'}>
           <button
             type='button'
-            onClick={() => console.log('logout user')}
+            onClick={logoutUser}
             className='navbar-dropdown-btn'
           >
             logout
