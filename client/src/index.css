@@ -460,6 +460,7 @@ code {
   width: 175px;
 }
 
+
 .register-main-container{
   background-color: rgb(245,247,249);
   height:125vh;
@@ -558,6 +559,135 @@ h3{
   color: #2A3950;
   font-weight: 700;
 }
+
+/* Dashboard - Shared Layout*/
+.dashboard{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.dashboard-page{
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Dashboard - Sidebar */
+.sidebar-container{
+  background-color: #2A3950;
+  min-height: 100vh;
+  height: 100%;
+  width: 225px;
+}
+
+.sidebar-content{
+  position: stick;
+  top: 0;
+}
+
+.sidebar-header{
+  height: 6rem;
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #4A668F;
+}
+
+.logo-dark{
+  display: block;
+  margin: 0 auto;
+  width: 175px;
+  align-self: center;
+}
+
+.sidebar-p{
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #4A668F;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+/* Dashboard - Navbar */
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 6.5rem;
+  background-color: #2A3950;
+  padding-right: 2rem;
+}
+
+.navbar-btn-container{
+  position: relative;
+
+}
+
+.navbar-btn{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 0.5rem;
+  position: relative;
+  padding: .3rem;
+  border: none;
+  color: white;
+  background-color:#2A3950;
+  font-size: 20px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+
+}
+
+.navbar-dropdown{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+
+}
+
+.show-navbar-dropdown {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-dropdown-btn{
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 0.3rem;
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  border-top: 1px solid #4A668F
+}
+
+.nav-links {
+  padding-top: .2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  padding: .875rem 0;
+  padding-left: 3rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: 'Heebo', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 16.5px;
+}
+
+
 
 /** Student Dashboard **/
 

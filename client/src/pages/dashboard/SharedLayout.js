@@ -1,13 +1,19 @@
 import {Outlet, Link} from 'react-router-dom'
+import {Navbar, Sidebar, DashboardFooter} from  '../../components'
 
 const SharedLayout = () => {
   return (
   <>
-    <nav>
-      <Link to='job-board'>Job Board</Link>
-      <Link to='profile'>Profile</Link>
-    </nav>
-    <Outlet/>
+    <main className='dashboard'>
+    <Sidebar/>
+    <div>
+      <Navbar/>
+      <div className='dashboard-page'>
+        <Outlet/>
+      </div>
+      {/* <DashboardFooter/> */}
+    </div>
+    </main>
   </> 
   )
 }
