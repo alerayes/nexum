@@ -12,7 +12,7 @@ function App() {
             <Route path="/dashboard/*" element={<StudentDashboard/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/landing" element={<Landing/>} />
-            <Route path="*" element={<Error/>}/>
+            {/* <Route path="*" element={<Error/>}/> */}
           </Routes>
       </BrowserRouter>      
     </div>
