@@ -78,19 +78,24 @@ function Popup(props) {
                             <fieldset>
                             <legend>Employment Type:</legend>
                             <select id="cars" name="cars" onChange={(e) => setEmploymentType(e.target.value)}  value={employmenttype}>
-                                <option value="volvo">Volvo XC90</option>
-                                <option value="saab">Saab 95</option>
-                                <option value="mercedes">Mercedes SLK</option>
-                                <option value="audi">Audi TT</option>
+                                <option value="Select">-- Select --</option>
+                                <option value="Full-Time">Full-Time Position</option>
+                                <option value="Part-Time">Part-Time Position</option>
+                                <option value="Contract">Contract Position</option>
+                                <option value="wfh">Work From Home</option>
                             </select>
                             </fieldset>
                             <fieldset>
                             <legend>Board:</legend>
                             <select id="cars" name="cars" onChange={(e) => setBoard(e.target.value)} value={board}>
-                                <option value="volvo">Volvo XC90</option>
-                                <option value="saab">Saab 95</option>
-                                <option value="mercedes">Mercedes SLK</option>
-                                <option value="audi">Audi TT</option>
+                                <option value="Select">-- Select --</option>
+                                <option value="today">Today</option>
+                                <option value="1day">1 day ago</option>
+                                <option value="2day">2 day ago</option>
+                                <option value="3day">3 day ago</option>
+                                <option value="4day">4 day ago</option>
+                                <option value="5day">5 day ago</option>
+                                <option value="week">Week ago</option>
                             </select>
                             </fieldset>
                         </div>

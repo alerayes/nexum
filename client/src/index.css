@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap');
 
 /* Normalize */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -837,7 +837,7 @@ hr{
   margin-bottom: 15px;
 }
 .jobSection{
-  padding: 1rem;
+  padding: 1rem 1rem 0.25rem 1rem;
   background: #D9E7E7;
   /* border-radius: 0px 0px 8px 8px; */
   margin: 0;
@@ -845,6 +845,15 @@ hr{
   justify-content: space-between;
   border-bottom:1px solid black;
 }
+.jobSection > span {
+  color: rgba(42, 57, 80, 0.7);
+  font-size: 16px;
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+
 .jobdescDetails{
     font-family: 'Heebo';
     background: #D9E7E7;
