@@ -1,9 +1,11 @@
 import React, { useState  } from 'react'
 import { useJobpost } from "../hooks/useJobpost"
 import { useNavigate } from 'react-router-dom'
+import success from '../assets/success.gif'
 //import { Link } from 'react-router-dom'
 
 function Popup(props) {
+    const [formVisibility, setformVisibility] = useState(true)
     const [company, setCompany] = useState('')
     const [location, setLocation] = useState('')
     const [position, setPosition] = useState('')
@@ -19,10 +21,13 @@ function Popup(props) {
         e.preventDefault()
 
         await jobpost(company , location, position, startdate, employmenttype, board, description ,joblink)
+
+        setformVisibility(false);
+        setTimeout(() => {
+            props.setTrigger(false)
+        },2000)
     }
-    function redirectToJobPost (){
-        navigate('/job-board');
-    }
+    
     // useEffect( () => {
     //     if(jobpost) {
     //       setTimeout(() => {
@@ -34,9 +39,11 @@ function Popup(props) {
   return (props.trigger) ? (
     <div className='popup'>
         <div className="popup-inner">
-        <h1 className='JobPopupTitle'>Add New Job Post</h1>
-
-        <form className="JobBoardFormSection" onSubmit={handleSubmit}>
+        {/* <h1 className='JobPopupTitle'>Add New Job Post</h1> */}
+        { 
+            formVisibility && <>
+                <h1 className='JobPopupTitle'>Add New Job Post</h1>
+                <form className="JobBoardFormSection" onSubmit={handleSubmit}>
                     <div className="JobBoard-form-group">
                         <div className="fieldgroup">
                             <fieldset>
@@ -110,13 +117,18 @@ function Popup(props) {
                             </fieldset>
                         </div>
                         <div className="button-login">
-                        <button disabled={isLoading} onClick={redirectToJobPost} > Save Job</button>
+                        <button disabled={isLoading} onClick={() => props.setTrigger(false)} className='Cancel-btn' > Cancel</button>    
+                        <button disabled={isLoading} className='Post-btn'> Post</button>
                         </div>
                     {/* <input type="submit" value="Submit"></input> */}
                     </div>
                     {error && <div>{error}</div>}
                 </form>
-        <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>
+            </>
+        }
+        { !formVisibility && <div className='success-msg'><img src={success}/><h1>Success</h1></div>}
+        
+        <button className="close-btn" onClick={() => props.setTrigger(false)}><b>X</b></button>
         </div>
         
     </div>

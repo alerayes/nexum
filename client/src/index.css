@@ -383,7 +383,7 @@ code {
 }
 .button-login{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   
 }
 /** Login **/
@@ -890,14 +890,18 @@ line-height: 24px;
 }
 .popup-inner .close-btn{
   position: absolute;
-  top: 16px;
-  right: 16px;
+    top: 62px;
+    right: 39px;
+    background: #F5F7F9;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
 }
 /**job board popup**/
 .popup-inner{
   background: #F5F7F9;
   max-width: 1060px;
-  height:536px;
+  height:560px;
 }
 .JobPopupTitle{
   font-family: 'Heebo';
@@ -948,4 +952,30 @@ margin:0.5rem;
   position: relative;
   width: 100%;
   line-height: 2ex;
+}
+
+/** button cancel **/
+.Cancel-btn{
+  padding: 12px 24px 12px 24px;
+  width: 158px;
+  height: 48px;
+  border-radius: 6px;
+  background: white;
+  color: #2A3950;
+  margin: 0 10px;
+}
+.Post-btn{
+  padding: 12px 24px 12px 24px;
+  width: 158px;
+  height: 48px;
+  border-radius: 6px;
+  background:#2A3950;
+  color:white;
+  margin-right: 10px;
+}
+.success-msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
