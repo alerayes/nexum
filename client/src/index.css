@@ -596,7 +596,7 @@ h3{
   flex-grow: 1;
   background: #F5F7F9;
 }
-.alumni-list h1{
+.alumni-list > h1{
   font-size:50px;
 }
 .search-list{
@@ -726,4 +726,86 @@ hr{
 }
 .jobBoard-list-comp{
   flex-basis:80%;
+}
+/** JobPostPopup **/
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100vh;
+  /* background-color: rgba(0,0,0,0.2); */
+  background-color: rgba(42, 57, 80, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-inner{
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+}
+.popup-inner .close-btn{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+/**job board popup**/
+.popup-inner{
+  background: #F5F7F9;
+  max-width: 1060px;
+  height:536px;
+}
+.JobPopupTitle{
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 53px;
+  border-bottom: 1px solid #2A3950;
+}
+.JobBoard-form-group{
+  display: flex;
+  flex-direction: column;
+}
+.fieldgroup{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.fieldgroup > fieldset{
+  background: #FFFFFF;
+border: 1.5px solid #2A3950;
+border-radius: 8px;
+margin:0.5rem;
+}
+
+.fieldgroup > fieldset> input{
+  border: none;
+  border-radius: 6px;
+  position: relative;
+  width: 100%;
+  /* margin: 10px; */
+  line-height: 2ex;
+  /* padding-left: 20px; */
+  font-family: 'Heebo', 'sans-serif';
+}
+.fieldgroup > fieldset> select{
+  border: none;
+  border-radius: 6px;
+  position: relative;
+  width: 100%;
+  line-height: 2ex;
+}
+.grid-grow{
+  grid-column:  1/-1;
+}
+.fieldgroup > fieldset> textarea{
+  border: none;
+  border-radius: 6px;
+  position: relative;
+  width: 100%;
+  line-height: 2ex;
 }

@@ -1,13 +1,23 @@
-const jobBoard = () => {
+//import Pop from './JobBoardPopup.js'
+import Popup from './Popup.js'
+import React , { useState } from 'react';
+
+const JobBoard = () => {
+    const [buttonPopup, SetButtonPopup] = useState(false);
+    //const [name, Setname] = useState(false);
     return ( 
-        <>
+        
         <div className="alumni-list jobBoard-list-comp">
         <h1>Job Board </h1>
         <div className="search-list">
             <input type="text" />
             
-            <button className="search">Add New Job Post</button>
+            <button className="search" onClick={() => SetButtonPopup(true) }> Add New Job Post</button>       
         </div>
+        <Popup trigger={buttonPopup} setTrigger={SetButtonPopup}>
+                <h3>My Pop up</h3>
+                <p>This is my button triggered popup</p>
+            </Popup>
         <hr />
         <div className="jobList-detail">
             <ul>
@@ -35,8 +45,8 @@ const jobBoard = () => {
         </div>
             
         
-        </>
+        
      );
 }
  
-export default jobBoard;
+export default JobBoard;

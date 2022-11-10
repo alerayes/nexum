@@ -6,6 +6,7 @@ import { DISPLAY_ALERT,
          LOGIN_USER_BEGIN,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
+         JOB_POST_SUCCESS,
      } from "./actions"
 
 const reducer = (state, action) => {
@@ -41,6 +42,18 @@ const reducer = (state, action) => {
             showAlert: true,
             alertType: 'success',
             alertText: 'User Created! Redirecting...'
+        }
+    }
+
+    if(action.type === JOB_POST_SUCCESS){
+        return {
+            ...state,
+            job: action.payload.job,
+            token: action.payload.token,
+            isLoading: false,
+            showAlert: true,
+            alertType: 'success',
+            alertText: 'Job Created!'
         }
     }
 
