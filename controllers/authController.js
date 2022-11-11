@@ -25,8 +25,9 @@ const register = async (req, res) => {
                 email: user.email,
                 name: user.name,
                 lastName: user.lastName,
-                institution: user.institution,
                 program: user.program,
+                linkedInProfile: user.linkedInProfile,
+                phoneNumber: user.phoneNumber
             },
             token
         })
@@ -61,9 +62,9 @@ const login = async (req, res) => {
 }
 
 const updateUser = async (req, res) => {
-    const {name, email, lastName, institution, program} = req.body
+    const {name, email, lastName, program, linkedInProfile, phoneNumber} = req.body
 
-    if(!email || !name || !lastName || !institution || !program){
+    if(!email || !name || !lastName || !program || !linkedInProfile || !phoneNumber){
         throw new BadRequestError('Please provide all values')
     }
 
@@ -72,8 +73,9 @@ const updateUser = async (req, res) => {
     user.name = name
     user.email = email
     user.lastName = lastName
-    user.institution = institution
     user.program = program
+    user.linkedInProfile = linkedInProfile
+    user.phoneNumber = phoneNumber
 
     await user.save()
 

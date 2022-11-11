@@ -34,19 +34,23 @@ const UserSchema = new mongoose.Schema({
         trim: true,
         default: 'last name',
     },
-    institution: {
-        type: String,
-        minlength: 2,
-        maxlength: 30,
-        trim: true,
-        default: 'institution',
-    },
     program: {
         type: String,
         minlength: 2,
         maxlength: 30,
         trim: true,
         default: 'institution',
+    },
+    linkedInProfile: {
+        type: String,
+        trim: true,
+        default: 'myProfile'
+    },
+    phoneNumber: {
+        type: String,
+        maxlength: 20,
+        trim: true,
+        default: 'myNumber'
     }
 })
 
