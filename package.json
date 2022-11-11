@@ -8,7 +8,6 @@
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
     "start": "concurrently --kill-others-on-fail \" npm run server \" \" npm run client \""
-
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,7 @@
     "mongoose": "^6.7.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
+    "react-icons": "^4.6.0",
     "validator": "^13.7.0",
     "webpack-dev-middleware": "^5.3.3"
   },

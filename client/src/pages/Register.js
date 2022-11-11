@@ -48,7 +48,7 @@ const Register = () => {
   useEffect( () => {
     if(user) {
       setTimeout(() => {
-        navigate('/dashboard')
+        navigate('/')
       }, 3000)
     }
   }, [user, navigate])

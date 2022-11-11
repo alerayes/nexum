@@ -6,7 +6,10 @@ import { DISPLAY_ALERT,
          LOGIN_USER_BEGIN,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
+         JOB_POST_SUCCESS,
+         LOGOUT_USER
      } from "./actions"
+import { initialState } from './appContext'
 
 const reducer = (state, action) => {
 
@@ -44,6 +47,18 @@ const reducer = (state, action) => {
         }
     }
 
+    if(action.type === JOB_POST_SUCCESS){
+        return {
+            ...state,
+            job: action.payload.job,
+            token: action.payload.token,
+            isLoading: false,
+            showAlert: true,
+            alertType: 'success',
+            alertText: 'Job Created!'
+        }
+    }
+
     if(action.type === REGISTER_USER_ERROR) {
         return {
             ...state,
@@ -76,6 +91,14 @@ const reducer = (state, action) => {
             showAlert: true,
             alertType: 'error',
             alertText: action.payload.msg,
+        }
+    }
+
+    if(action.type === LOGOUT_USER){
+        return{
+            ...initialState,
+            user: null,
+            token: null,
         }
     }
 

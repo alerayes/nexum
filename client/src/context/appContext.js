@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useContext } from 'react'
+import React, {  useReducer, useContext } from 'react'
 import reducer from './reducer'
 import axios from 'axios'
 import { DISPLAY_ALERT,
@@ -6,14 +6,19 @@ import { DISPLAY_ALERT,
          REGISTER_USER_BEGIN,
          REGISTER_USER_SUCCESS,
          REGISTER_USER_ERROR,
+         JOB_POST_BEGIN,
+         JOB_POST_SUCCESS,
+         JOB_POST_ERROR,
          LOGIN_USER_BEGIN,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
+         LOGOUT_USER,
          } from "./actions"
 
 
 const token = localStorage.getItem('token')
 const user = localStorage.getItem('user')
+const job = localStorage.getItem('job')
 
 export const initialState = {
     isLoading: false,
@@ -21,6 +26,7 @@ export const initialState = {
     alertText: '',
     alertType: '',
     user: user ? JSON.parse(user) : null,
+    job: job ? JSON.parse(job) : null,
     token: token,
 }
 
@@ -46,6 +52,11 @@ const AppProvider = ({children}) => {
 
     const addUserToLocalStorage = ({ user, token}) => {
         localStorage.setItem('user', JSON.stringify(user))
+        localStorage.setItem('token', token)
+    }
+
+    const addJobToLocalStorage = ({ job, token}) => {
+        localStorage.setItem('job', JSON.stringify(job))
         localStorage.setItem('token', token)
     }
 
@@ -79,6 +90,31 @@ const AppProvider = ({children}) => {
         clearAlert()
     }
 
+    const registerJob = async (currentUser) => {
+        dispatch({type: JOB_POST_BEGIN})
+        try {
+            const response = await axios.post('/api/v1/auth/jobPost', currentUser)
+            console.log(response)
+            const { job, token } = response.data
+            dispatch({
+                type: JOB_POST_SUCCESS,
+                payload: {
+                    job, 
+                    token,
+                },
+            })
+            addJobToLocalStorage({job, token})
+
+        } catch (error) {  
+            console.log(error.response)
+            dispatch({
+                type: JOB_POST_ERROR,
+                payload: { msg: error.response.data.msg }
+            })
+        }
+        clearAlert()
+    }
+
     const loginUser = async (currentUser) => {
         dispatch({type: LOGIN_USER_BEGIN})
         try {
@@ -104,9 +140,14 @@ const AppProvider = ({children}) => {
         clearAlert()
     }
 
+    const logoutUser = () => {
+        dispatch({type: LOGOUT_USER})
+        removeUserFromLocalStorage()
+    }
+
     return (
         <AppContext.Provider
-            value={{...state, displayAlert, registerUser, loginUser}}
+            value={{...state, displayAlert, registerUser, loginUser, registerJob, logoutUser}}
         >
             {children}
         </AppContext.Provider>

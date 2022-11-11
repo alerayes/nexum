@@ -2,7 +2,7 @@ import LogoIcon from '../assets/nexum_logo.png'
 import Avatar from '../assets/Avatar_D.png'
 import Footer from '../component/footer'
 import AlumniList from '../components/AlumniList.js'
-import Job from '../components/JobBoard.js'
+import Job from './dashboard/JobBoard.js'
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
 
 const StudentDashboard = () => {
