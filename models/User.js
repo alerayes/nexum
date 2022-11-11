@@ -39,7 +39,7 @@ const UserSchema = new mongoose.Schema({
         minlength: 2,
         maxlength: 30,
         trim: true,
-        default: 'institution',
+        default: 'program',
     },
     linkedInProfile: {
         type: String,
