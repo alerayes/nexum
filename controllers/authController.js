@@ -24,8 +24,10 @@ const register = async (req, res) => {
             user: {
                 email: user.email,
                 name: user.name,
-                education: user.education,
-                professionalExperience: user.professionalExperience
+                lastName: user.lastName,
+                program: user.program,
+                linkedInProfile: user.linkedInProfile,
+                phoneNumber: user.phoneNumber
             },
             token
         })
@@ -40,6 +42,7 @@ const login = async (req, res) => {
     }
 
     const user = await User.findOne({email}).select('+password')
+
     if(!user){
         throw new UnauthenticatedError('Invalid email')
     }
@@ -56,19 +59,36 @@ const login = async (req, res) => {
     user.password = undefined
 
     res.status(StatusCodes.OK).json({user, token})
-
-    
 }
 
 const updateUser = async (req, res) => {
-    res.send('update user')
+    const {name, email, lastName, program, linkedInProfile, phoneNumber} = req.body
+
+    if(!email || !name || !lastName || !program || !linkedInProfile || !phoneNumber){
+        throw new BadRequestError('Please provide all values')
+    }
+
+    const user = await User.findOne({_id: req.user.userId})
+
+    user.name = name
+    user.email = email
+    user.lastName = lastName
+    user.program = program
+    user.linkedInProfile = linkedInProfile
+    user.phoneNumber = phoneNumber
+
+    await user.save()
+
+    const token = user.createJWT()
+
+    res.status(StatusCodes.OK).json({user, token})
 }
 
 const getAllUsers = async (req, res) => {
     
     const users = await User.find({})
 
-    res.status(200).json(users)
+    res.status(StatusCodes.OK).json(users)
     console.log(res.status(200).json(users))
 }
  
