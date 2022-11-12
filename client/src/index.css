@@ -737,6 +737,8 @@ h3{
 .search-list input{
   flex-grow: 1;
   font-size: 30px;
+  border: 1px solid rgba(42, 57, 80, 0.7);
+  border-radius: 6px;
 }
 hr{
   margin: 2rem 0rem;
@@ -748,14 +750,20 @@ hr{
   font-size:25px;
 }
 .alumni-list .search{
-  width:20%;
-  height:50px;
+  width: 256px;
+height: 48px;
+  /* width:20%;
+  height:50px; */
   color:white;
   background-color: rgb(41,57,79);
   margin-left:20px;
   font-weight:bold;
   font-size:15px;
+  border-radius: 6px;
 
+}
+.nav-links > a:hover{
+  background-color:  #4A668F;
 }
 .alumni-list-button{
   background: #AAF0D8;
@@ -824,6 +832,8 @@ hr{
   justify-content: space-between;
   padding: 1rem;
   background: white;
+  border-radius: 8px 8px 0px 0px;
+
 }
 .jobList-detail >ul>li>details>p>hr{
   margin: 0;
@@ -863,6 +873,7 @@ line-height: 24px;
     line-height: 22px;
     margin: 0;
     padding: 1rem;
+    border-radius: 0px 0px 8px 8px;
 }
 .jobBoard-list-comp{
   flex-basis:80%;
@@ -978,8 +989,24 @@ margin:0.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 71vh;
 }
-
+.apply-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+.apply-btn > a > button {
+  background: #2A3950;
+  border-radius: 6px;
+  padding: 12px 24px;
+  width : 156px;
+  height : 48px;
+  color:white;
+  border:none;
+}
+/* summary > ::marker{
+  border:1px solid black;
+} */
 /*Landing page css*/
 
 .landingImg {

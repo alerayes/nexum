@@ -1,7 +1,7 @@
 import React, { useState  } from 'react'
 import { useJobpost } from "../hooks/useJobpost"
-import { useNavigate } from 'react-router-dom'
-import success from '../assets/success.gif'
+//import { useNavigate } from 'react-router-dom'
+import success from '../assets/tick.png'
 //import { Link } from 'react-router-dom'
 
 function Popup(props) {
@@ -15,7 +15,7 @@ function Popup(props) {
     const [description, setDescription] = useState('')
     const [joblink, setJobLink] = useState('')
     const {jobpost, error, isLoading} = useJobpost()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -52,6 +52,7 @@ function Popup(props) {
                                     type="text"
                                     onChange={(e) => setCompany(e.target.value)} 
                                     value={company}
+                                    required
                                 />
                             </fieldset>
                             <fieldset>
@@ -60,6 +61,7 @@ function Popup(props) {
                                     type="text"
                                     onChange={(e) => setLocation(e.target.value)} 
                                     value={location}
+                                    required
                                 />
                             </fieldset>
                         </div>
@@ -70,6 +72,7 @@ function Popup(props) {
                                     type="text"
                                     onChange={(e) => setPosition(e.target.value)} 
                                     value={position}
+                                    required
                                 />
                             </fieldset>
                             <fieldset>
@@ -78,6 +81,7 @@ function Popup(props) {
                                     type="date"
                                     onChange={(e) => setStartDate(e.target.value)} 
                                     value={startdate}
+                                    required
                                 />
                             </fieldset>
                         </div>
@@ -113,7 +117,7 @@ function Popup(props) {
                             </fieldset>
                             <fieldset className='grid-grow'>
                             <legend>Job Link:</legend>
-                                <input  onChange={(e) => setJobLink(e.target.value)} value={joblink} />
+                                <input  onChange={(e) => setJobLink(e.target.value)} value={joblink} required />
                             </fieldset>
                         </div>
                         <div className="button-login">
@@ -126,7 +130,7 @@ function Popup(props) {
                 </form>
             </>
         }
-        { !formVisibility && <div className='success-msg'><img src={success}/><h1>Success</h1></div>}
+        { !formVisibility && <div className='success-msg'><img src={success} alt="Success"/><h1>Success</h1></div>}
         
         <button className="close-btn" onClick={() => props.setTrigger(false)}><b>X</b></button>
         </div>

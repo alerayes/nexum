@@ -47,7 +47,7 @@ const JobBoard = () => {
                                             <>
                                             <li>
                     <details>
-                        <summary>{job.position} <span>Posted 1 day ago</span></summary>
+                        <summary> {job.position} <span>Posted 1 day ago</span></summary>
                         <p className="jobSection">
                                 <span>{job.company}</span>
                                 <span>{job.location}</span>
@@ -56,8 +56,14 @@ const JobBoard = () => {
                         
                         <p className="jobdescDetails">
                                 <span className="descJob"><b>Description</b></span> <br />
-                                {job.description}
-                            </p>
+                                {job.description} <br/>
+                                <div className='apply-btn'>
+                              <a href={job.joblink} rel='noreferrer' target='_blank'>  <button>Apply Here</button> </a>
+                                </div>
+                                
+                        </p>
+
+                        
                         
                     </details>
                 </li>
