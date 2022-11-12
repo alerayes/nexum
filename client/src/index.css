@@ -979,3 +979,131 @@ margin:0.5rem;
   justify-content: center;
   align-items: center;
 }
+
+/*Landing page css*/
+
+.landingImg {
+  width: 16%;
+  
+}
+
+.navLogo {
+  margin-left: 10px;
+  margin-top: 11px;
+}
+
+.landingHeader {
+  background-color: #2A3950;
+  height: 100px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.navList {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 15px;
+  
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.lgBtn {
+  background-color: #D3EEE2;
+  border: none;
+  height: 29px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 70px;
+}
+
+.navList > div{
+  padding: 15px;
+}
+
+.columMain {
+  text-align:center;
+  color: #2A3950;
+}
+
+.forMain {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 16%;
+  color: #2A3950;
+}
+
+.forMain > div {
+  padding-top: 6%;
+}
+
+.columnDev1 {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  padding-left: 35%;
+  padding-top: 5%;
+}
+
+.columnDev2 {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  padding-left: 30%;
+  padding-top: 5%;
+}
+
+.hero {
+  background-color: #D9E6E7;
+  margin-top: -22px;
+  height: 394px;
+}
+
+.heroD {
+  padding-top: 100px;
+  padding-left: 300px;
+
+}
+
+.chooseBtn {
+  background-color: #2A3950;
+  border: none;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 200px;
+  color: #FFFFFF;
+}
+
+.heroD > h1, p {
+  color:#2A3950;
+}
+
+.classFooter {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  background-color: #2A3950;
+  height: 400px;
+  padding-left: 25%;
+}
+
+.ft1 {
+  color: #FFFFFF;
+}
+
+.footerForm {
+  background-color: #FFFFFF;
+  height: 350px;
+  margin-top: 20px;
+}
+
+.footerImg {
+  width: 8%;
+  padding-left: 40%;
+}
+
+.hr {
+  background-color: #2A3950;
+  margin-top: -40px;
+}
