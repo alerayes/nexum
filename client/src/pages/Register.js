@@ -27,13 +27,13 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     
-    const { name, email, password, isMember } = values
+    const { name, email, password, isMember, lastName, program, phoneNumber } = values
 
-    if(!email || !password || (!isMember && !name)){
+    if(!email || !password || (!isMember && (!name || !lastName || !program || !phoneNumber))){
       displayAlert() 
       return
     }
-    const currentUser = {name, email, password}
+    const currentUser = {name, email, password, lastName, program, phoneNumber}
 
     if(isMember){
       loginUser(currentUser)
@@ -69,6 +69,32 @@ const Register = () => {
               type='text'
               name='name'
               value={values.name}
+              handleChange={handleChange}
+            />
+            )}
+            { !values.isMember && (
+              <FormRow
+              type='text'
+              name='lastName'
+              labelText='last name'
+              value={values.lastName}
+              handleChange={handleChange}
+            />
+            )}
+            { !values.isMember && (
+              <FormRow
+              type='text'
+              name='phoneNumber'
+              labelText='phone number'
+              value={values.phoneNumber}
+              handleChange={handleChange}
+            />
+            )}
+            { !values.isMember && (
+              <FormRow
+              type='text'
+              name='program'
+              value={values.program}
               handleChange={handleChange}
             />
             )}
