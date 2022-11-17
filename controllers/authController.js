@@ -64,9 +64,9 @@ const login = async (req, res) => {
 const updateUser = async (req, res) => {
     const {name, email, lastName, program, linkedInProfile, phoneNumber} = req.body
 
-    if(!email || !name || !lastName || !program || !linkedInProfile || !phoneNumber){
-        throw new BadRequestError('Please provide all values')
-    }
+    // if(!email || !name || !lastName || !program || !linkedInProfile || !phoneNumber){
+    //     throw new BadRequestError('Please provide all values')
+    // }
 
     const user = await User.findOne({_id: req.user.userId})
 
@@ -89,7 +89,7 @@ const getAllUsers = async (req, res) => {
     const users = await User.find({})
 
     res.status(StatusCodes.OK).json(users)
-    console.log(res.status(200).json(users))
+
 }
  
 export { register, login, updateUser, getAllUsers }
