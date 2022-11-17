@@ -13,6 +13,9 @@ import { DISPLAY_ALERT,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
          LOGOUT_USER,
+         UPDATE_USER_BEGIN,
+         UPDATE_USER_SUCCESS,
+         UPDATE_USER_ERROR,
          } from "./actions"
 
 
@@ -176,12 +179,29 @@ const AppProvider = ({children}) => {
     }
 
     const updateUser = async (currentUser) => {
+        dispatch({type: UPDATE_USER_BEGIN})
         try {
             const {data} = await authFetch.patch('/auth/updateUser', currentUser)
-            console.log(data)
+
+            const {user, token} = data
+
+            dispatch({
+                type: UPDATE_USER_SUCCESS,
+                payload: {
+                    user,
+                    token
+                }
+             })
+
+             addUserToLocalStorage({user, token})
         } catch (error) {
-            // console.log(error.response)
+            dispatch({
+                type: UPDATE_USER_ERROR,
+                payload: {msg: error.response.data.msg}
+            })
         }
+
+        clearAlert()
     }
 
     return (

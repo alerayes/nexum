@@ -15,10 +15,10 @@ const Profile = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // if( !name || !email || !lastName || !program || !linkedInProfile || !phoneNumber){
-    //   displayAlert()
-    //   return
-    // }
+    if( !name || !email || !lastName || !program || !linkedInProfile || !phoneNumber){
+      displayAlert()
+      return
+    }
     
     updateUser({name, email, lastName, program, linkedInProfile, phoneNumber})
   }
