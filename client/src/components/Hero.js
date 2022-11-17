@@ -12,6 +12,7 @@ const Hero = () => {
                 <img className="headPic" src={headerPic} />
             </div>
         </div>
+        <hr />
         </>
     );
 }
