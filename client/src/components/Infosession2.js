@@ -5,7 +5,7 @@ const Infosession2 = () => {
                 <img src="" alt="image" />
                 <div className="devDetails">
                     <h3>Name</h3>
-                    <p>Position</p>
+                    <p>Developer</p>
                     <p>LinkedIn</p>
                 </div>
             </div>
@@ -14,7 +14,7 @@ const Infosession2 = () => {
                 <img src="" alt="image" />
                 <div className="devDetails">
                     <h3>Name</h3>
-                    <p>Position</p>
+                    <p>Developer</p>
                     <p>LinkedIn</p>
                 </div>
             </div>
@@ -23,7 +23,7 @@ const Infosession2 = () => {
                 <img src="" alt="image" />
                 <div className="devDetails">
                     <h3>Name</h3>
-                    <p>Position</p>
+                    <p>Developer</p>
                     <p>LinkedIn</p>
                 </div>
             </div>
@@ -33,4 +33,3 @@ const Infosession2 = () => {
 }
  
 export default Infosession2;
-
