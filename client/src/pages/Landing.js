@@ -10,7 +10,7 @@ import Footerland from '../components/Footerland'
 
 const Landing = () => {
     return (
-    <div> 
+    <div className="thisBody">
         <div className="landingHeader">
             <div className="navLogo">
                 <img className="landingImg" src={LogoIcon} />

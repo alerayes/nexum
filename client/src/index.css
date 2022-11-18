@@ -1010,6 +1010,10 @@ margin:0.5rem;
 } */
 /*Landing page css*/
 
+.thisBody {
+  background-color: #E5E5E5;
+}
+
 .landingImg {
   width: 16%;
   
@@ -1083,7 +1087,9 @@ a {
 }
 
 .hero {
-  background-color: #D9E6E7;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #E5E5E5;
   margin-top: -22px;
   height: 394px;
 }

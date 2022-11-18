@@ -13,6 +13,9 @@ import { DISPLAY_ALERT,
          LOGIN_USER_SUCCESS,
          LOGIN_USER_ERROR,
          LOGOUT_USER,
+         UPDATE_USER_BEGIN,
+         UPDATE_USER_SUCCESS,
+         UPDATE_USER_ERROR,
          } from "./actions"
 
 
@@ -34,6 +37,36 @@ const AppContext = React.createContext()
 
 const AppProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
+
+    // axios
+    const authFetch = axios.create({
+        baseURL: 'api/v1/',
+    })
+
+    // request
+    authFetch.interceptors.request.use(
+        (config) => {
+            config.headers['Authorization'] = `Bearer ${state.token}`
+            return config
+        }, 
+        (error) => {
+            return Promise.reject(error)
+        }
+    )
+
+    // response
+    authFetch.interceptors.request.use(
+        (response) => {
+            return response
+        }, 
+        (error) => {
+            console.log(error.response)
+            if(error.response.status === 401){
+                logoutUser()
+            }
+            return Promise.reject(error)
+        }
+    )
 
     const displayAlert = () => {
         dispatch({
@@ -146,16 +179,33 @@ const AppProvider = ({children}) => {
     }
 
     const updateUser = async (currentUser) => {
+        dispatch({type: UPDATE_USER_BEGIN})
         try {
-            const {data} = await axios.patch('/api/v1/auth/updateUser', currentUser, {
-                headers: {
-                    Authorization: `Bearer ${state.token}`
+            const {data} = await authFetch.patch('/auth/updateUser', currentUser)
+
+            const {user, token} = data
+
+            dispatch({
+                type: UPDATE_USER_SUCCESS,
+                payload: {
+                    user,
+                    token
                 }
-            })
-            console.log(data)
+             })
+
+             addUserToLocalStorage({user, token})
         } catch (error) {
-            console.log(error.response)
+
+            if(error.response.status !== 401){
+                dispatch({
+                    type: UPDATE_USER_ERROR,
+                    payload: {msg: error.response.data.msg}
+                })
+            }
+
         }
+
+        clearAlert()
     }
 
     return (

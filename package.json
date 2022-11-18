@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/alerayes/nexum/issues"
   },
-  "homepage": "https://github.com/alerayes/nexum#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
