@@ -52,7 +52,7 @@ const StudentList = () => {
               <span>3 Years of Experience</span>
           </div>
           <div className='fb2'>
-          <Link to={ `alumni-individual-profile/${user._id}` }> <button className="alumni-list-button"  >Default</button> </Link>
+          <Link to={ `alumni-individual-profile/${user._id}` }> <button className="alumni-list-button"  >View Profile</button> </Link>
               
           </div>
           

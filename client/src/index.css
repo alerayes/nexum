@@ -754,23 +754,25 @@ hr{
 height: 48px;
   /* width:20%;
   height:50px; */
-  color:white;
-  background-color: rgb(41,57,79);
+  color:rgb(41,57,79);
+  background-color: #AAF0D8;;
   margin-left:20px;
   font-weight:bold;
   font-size:15px;
   border-radius: 6px;
+  border:none;
 
 }
 .nav-links > a:hover{
   background-color:  #4A668F;
 }
 .alumni-list-button{
-  background: #AAF0D8;
   border-radius: 6px;
   padding: 12px 24px;
   width: 220px;
     height: 48px;
+    color:white;
+    background: #2A3950;
 }
 
 .alumni-avatar{
