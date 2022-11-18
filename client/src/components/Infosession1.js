@@ -52,7 +52,7 @@ const Infosession1 = () => {
                 </div>
 
                 <div className="columnFt3Photo">
-                    <img className="ft3Pic" src={ft4Pic} />
+                    <img className="ft1Pic" src={ft4Pic} />
                 </div>
             </div>
         </div>
