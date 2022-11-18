@@ -49,13 +49,53 @@ const UserSchema = new mongoose.Schema({
     linkedInProfile: {
         type: String,
         trim: true,
-        default: 'myProfile'
+        default: 'my linkedin profile'
     },
     phoneNumber: {
         type: String,
         maxlength: 20,
         trim: true,
-        default: 'myNumber'
+        default: 'my number'
+    },
+    isWorking: {
+        type: String,
+        enum: ['I am open to work', 'I am working in my field'],
+        default: 'no'
+    },
+    aboutMe: {
+        type: String,
+        maxlength: 1000,
+        trim: true,
+        default: 'about me'
+    },
+    jobTitle: {
+        type: String,
+        maxlength: 60,
+        trim: true,
+        default: 'job title'
+    },
+    company: {
+        type: String,
+        maxlength: 100,
+        trim: true,
+        default: 'company name'
+    },
+    employmentType: {
+        type: String,
+        enum: ['Part-Time Position', 'Full-Time Position'],
+        default: 'Full-Time Position'
+    },
+    yearsOfExperience: {
+        type: String,
+        maxlength: 10,
+        trim: true,
+        default: '1 Year' 
+    },
+    jobDescription: {
+        type: String,
+        maxlength: 1000,
+        trim: true,
+        default: 'job description'
     }
 })
 
