@@ -4,7 +4,20 @@ import {BadRequestError, UnauthenticatedError} from '../errors/index.js'
 
 
 const register = async (req, res) => {  
-    const {name, email, password, lastName, program, phoneNumber, status} = req.body
+    const {name, 
+           email, 
+           password, 
+           lastName, 
+           program, 
+           phoneNumber, 
+           status, 
+           isWorking, 
+           aboutMe, 
+           jobTitle,
+           company,
+           employmentType,
+           yearsOfExperience,
+           jobDescription }  = req.body
 
     if(!name || !email || !password || !lastName || !program || !phoneNumber || !status){
         throw new BadRequestError('please provide all values')
@@ -16,7 +29,20 @@ const register = async (req, res) => {
         throw new BadRequestError('Email already in use')
     }
 
-    const user = await User.create({name, email, password, lastName, phoneNumber, program, status})
+    const user = await User.create({name, 
+                                    email, 
+                                    password, 
+                                    lastName, 
+                                    phoneNumber, 
+                                    program, 
+                                    status, 
+                                    isWorking, 
+                                    aboutMe, 
+                                    jobTitle,
+                                    company,
+                                    employmentType,
+                                    yearsOfExperience,
+                                    jobDescription})
     const token = user.createJWT()
     res
         .status(StatusCodes.CREATED)
@@ -28,7 +54,14 @@ const register = async (req, res) => {
                 status: user.status,
                 program: user.program,
                 linkedInProfile: user.linkedInProfile,
-                phoneNumber: user.phoneNumber
+                phoneNumber: user.phoneNumber,
+                isWorking: user.isWorking,
+                aboutMe: user.aboutMe,
+                jobTitle: user.jobTitle,
+                company: user.company,
+                employmentType: user.employmentType,
+                yearsOfExperience: user.yearsOfExperience,
+                jobDescription: user.jobDescription,
             },
             token
         })
@@ -63,7 +96,20 @@ const login = async (req, res) => {
 }
 
 const updateUser = async (req, res) => {
-    const {name, email, lastName, program, linkedInProfile, phoneNumber, status} = req.body
+    const {name, 
+           email, 
+           lastName, 
+           program, 
+           linkedInProfile, 
+           phoneNumber, 
+           status, 
+           isWorking, 
+           aboutMe,
+           jobTitle,
+           company,
+           employmentType,
+           yearsOfExperience,
+           jobDescription } = req.body
 
     if(!email || !name || !lastName || !program || !linkedInProfile || !phoneNumber || !status){
         throw new BadRequestError('Please provide all values')
@@ -78,6 +124,13 @@ const updateUser = async (req, res) => {
     user.program = program
     user.linkedInProfile = linkedInProfile
     user.phoneNumber = phoneNumber
+    user.isWorking = isWorking
+    user.aboutMe = aboutMe
+    user.jobTitle = jobTitle
+    user.company = company
+    user.employmentType = employmentType
+    user.yearsOfExperience = yearsOfExperience
+    user.jobDescription = jobDescription
 
     await user.save()
 
