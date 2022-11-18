@@ -567,9 +567,9 @@ h3{
 }
 
 .dashboard-page{
-  width: 90%;
+  /* width: 90%; */
   margin: 0 auto;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
 /* Dashboard - Sidebar */
@@ -1134,4 +1134,71 @@ a {
 .hr {
   background-color: #2A3950;
   margin-top: -40px;
+}
+
+/**Profile section **/
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+}
+.hero-bottom {
+  display: flex;
+}
+.hero-bottom > img {
+  height:100px;
+  position: relative;
+  top: 30px;
+}
+.detail-email{
+  display: flex;
+}
+.detail-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+.hero-section{
+  background: #D9E6E7;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+padding:0rem 1rem;
+}
+.hero-top > h2 {
+  height: 24px;
+  width: 245px;
+  left: 120px;
+  top: 159px;
+
+}
+.student-email-section{
+  display: flex;
+  align-items: center;
+  margin-right:1rem;
+}
+.student-phone-section{
+  display: flex;
+  align-items: center;
+}
+.student-phone-section > img {
+  height: 12px;
+  margin-right: 0.5rem;
+}
+.student-email-section > img{
+  height: 12px;
+  margin-right: 0.5rem;
+}
+.linkedin-button{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-detail-student{
+  max-width: 1096px;
+    margin: 0 auto;
+}
+.student-work-component{
+  background: #D9E6E7;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+padding: 1rem;
 }

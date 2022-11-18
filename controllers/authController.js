@@ -91,5 +91,10 @@ const getAllUsers = async (req, res) => {
     res.status(StatusCodes.OK).json(users)
     console.log(res.status(200).json(users))
 }
- 
-export { register, login, updateUser, getAllUsers }
+
+const getUsersById = async (req,res) => {
+    const singleUser = await User.findById(req.params.id);
+    res.json(singleUser);
+}
+
+export { register, login, updateUser, getAllUsers,getUsersById }

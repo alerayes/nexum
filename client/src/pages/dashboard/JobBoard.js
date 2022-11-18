@@ -45,7 +45,7 @@ const JobBoard = () => {
 
                                         return (
                                             <>
-                                            <li>
+                <li key={job._id} >
                     <details>
                         <summary> {job.position} <span>Posted 1 day ago</span></summary>
                         <p className="jobSection">
