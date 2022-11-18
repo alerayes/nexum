@@ -1035,6 +1035,8 @@ margin:0.5rem;
 /* summary > ::marker{
   border:1px solid black;
 } */
+
+
 /*Landing page css*/
 
 .thisBody {
@@ -1043,17 +1045,16 @@ margin:0.5rem;
 
 .landingImg {
   width: 16%;
-  
 }
 
 .navLogo {
   margin-left: 10px;
-  margin-top: 11px;
+  margin-top: 5px;
 }
 
 .landingHeader {
   background-color: #2A3950;
-  height: 100px;
+  height: 80px;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -1061,8 +1062,7 @@ margin:0.5rem;
 .navList {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  padding: 15px;
-  
+  padding: 0px;
 }
 
 a {
@@ -1080,7 +1080,7 @@ a {
 }
 
 .navList > div{
-  padding: 15px;
+  padding: 10px;
 }
 
 .columMain {
@@ -1091,8 +1091,12 @@ a {
 .forMain {
   display: grid;
   grid-template-columns: auto auto;
-  padding-left: 16%;
   color: #2A3950;
+  margin-left: 15%;
+}
+
+.ft1Pic {
+  width: 60%;
 }
 
 .forMain > div {
@@ -1101,30 +1105,41 @@ a {
 
 .columnDev1 {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-  padding-left: 35%;
+  grid-template-columns: auto auto auto;
   padding-top: 5%;
+  margin-left: 18%;
 }
 
 .columnDev2 {
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
-  padding-left: 30%;
+  grid-template-columns: auto auto auto auto;
   padding-top: 5%;
+  margin-left: 15%;
 }
 
+/*Hero Styling*/
 .hero {
   display: grid;
   grid-template-columns: auto auto;
   background-color: #E5E5E5;
   margin-top: -22px;
-  height: 394px;
 }
 
 .heroD {
-  padding-top: 100px;
-  padding-left: 300px;
+  margin-top: 120px;
+  margin-left: 220px;
+}
 
+.heroHr {
+  padding-top: 60px;
+}
+
+.heroHr > hr {
+  background-color: #CAC8C8;
+}
+
+.headPic {
+  width: 100%;
 }
 
 .chooseBtn {
@@ -1143,10 +1158,9 @@ a {
 
 .classFooter {
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: auto auto;
   background-color: #2A3950;
   height: 400px;
-  padding-left: 25%;
 }
 
 .ft1 {
@@ -1161,7 +1175,6 @@ a {
 
 .footerImg {
   width: 8%;
-  padding-left: 40%;
 }
 
 .hr {
