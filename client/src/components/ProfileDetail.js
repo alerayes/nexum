@@ -56,7 +56,7 @@ const ProfileDetail = () => {
         </div>
         <div className="main-detail-student">
             <div className="linkedin-button">
-                <a href="www.linkedin.com" rel='noreferrer' target='_blank'><button className='connectLinkedIn'> <img src={frame} alt="navigation" /> Connect</button></a>
+                <a href={users.linkedInProfile} rel='noreferrer' target='_blank'><button className='connectLinkedIn'> <img src={frame} alt="navigation" /> Connect</button></a>
             </div>
             <div className="about-me">
                 <h4>About Me</h4>

@@ -1272,8 +1272,21 @@ margin-bottom: 2rem;
 .student-work-detail{
   display: flex;
 }
+.student-work-detail > span{
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 32px;
+}
 .heading-job {
   margin: 0px;
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 32px;
+padding-right: 5px;
 }
 .job-poisition-detail-section {
   display: grid;
