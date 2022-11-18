@@ -44,8 +44,8 @@ const StudentList = () => {
               <img className='alumni-avatar' src={Avatar} alt="default avatar" />
           </div>
           <div className='fb'>
-              <span>Alumni</span> <br />
-              <h6>{user.name}</h6>
+              <span>Alumni</span> 
+              <h6>Alan riberio cordoso de mellow {user.name}</h6>
           </div>
           <div className='fb1'>
               <h6>Front End Developer</h6>

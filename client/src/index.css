@@ -769,36 +769,61 @@ height: 48px;
   background: #AAF0D8;
   border-radius: 6px;
   padding: 12px 24px;
+  width: 220px;
+    height: 48px;
 }
 
 .alumni-avatar{
   height:8vh;
 }
+.alumni-list-detail > ul{
+  margin: 0;
+  padding: 0;
+}
 .alumni-list-detail > ul>li{
   display: flex;
-  background: white;
   padding:1rem;
   margin:1rem 0rem;
+  background: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 .alumni-list-detail > ul>li>div>h6{
   margin: 0;
+  font-size:18px;
+  line-height: 24px;
 }
 .avatar-img-alumniList{
-  flex-basis: 20%;
+  flex-basis: 10%;
+  justify-content: space-evenly;
 }
 .fb{
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
+  flex-basis: 35%;
 
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.fb > span{
+  font-size: 16px;
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .fb1{
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
-
-  justify-content: space-between;
+  flex-basis: 30%;
+  justify-content: space-evenly;
+}
+.fb1 > span{
+  font-size: 16px;
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .fb2{
   display: flex;
@@ -1147,9 +1172,11 @@ a {
   display: flex;
   justify-content: space-between;
   height: 15vh;
+  padding-left: 3rem;
 }
 .hero-bottom {
   display: flex;
+  padding-left: 3rem;
 }
 .hero-bottom > img {
   height:100px;
@@ -1181,10 +1208,28 @@ padding:0rem 1rem;
   display: flex;
   align-items: center;
   margin-right:1rem;
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #2A3950;
 }
 .student-phone-section{
   display: flex;
   align-items: center;
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #2A3950;
 }
 .student-phone-section > img {
   height: 12px;
@@ -1197,6 +1242,19 @@ padding:0rem 1rem;
 .linkedin-button{
   display: flex;
   justify-content: flex-end;
+  margin: 2rem 0rem;
+}
+
+.connectLinkedIn {
+  width: 262px;
+  height: 48px;
+  background: #2A3950;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .main-detail-student{
@@ -1207,4 +1265,42 @@ padding:0rem 1rem;
   background: #D9E6E7;
 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 padding: 1rem;
+margin-bottom: 2rem;
+}
+.student-work-detail{
+  display: flex;
+}
+.heading-job {
+  margin: 0px;
+}
+.job-poisition-detail-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.detail-doc-section {
+  margin-bottom: 0px;
+  border-bottom:3px solid #2A3950;
+  max-width: 80%;
+}
+.navigation-section{
+  padding: 1rem;
+}
+.collName-banner{
+  text-align: right;
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 26px;
+margin:10px 0px;
+color: #2A3950;
+}
+.hero-name{
+  font-family: 'Heebo';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 44px;
+color: #2A3950;
 }
