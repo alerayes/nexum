@@ -4,9 +4,15 @@ import { FormRow, Alert, Logo } from '../components'
 import { UseAppContext } from '../context/appContext'
 
 const initialState = {
+    status: '',
     name: '',
     email: '',
     password: '',
+    lastName: '',
+    status: 'student',
+    statusOptions: ['student', 'alumni'],
+    program: '',
+    phoneNumber: '',
     isMember: true,
 }
 
@@ -27,13 +33,13 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     
-    const { name, email, password, isMember, lastName, program, phoneNumber } = values
+    const { name, email, password, isMember, lastName, program, phoneNumber, status } = values
 
-    if(!email || !password || (!isMember && (!name || !lastName || !program || !phoneNumber))){
+    if(!email || !password || (!isMember && (!name || !lastName || !program || !phoneNumber || !status))){
       displayAlert() 
       return
     }
-    const currentUser = {name, email, password, lastName, program, phoneNumber}
+    const currentUser = {name, email, password, lastName, program, phoneNumber, status}
 
     if(isMember){
       loginUser(currentUser)
@@ -64,6 +70,30 @@ const Register = () => {
           {/* Name Input */}
           
           <div className="form-group">
+          { !values.isMember && (
+            <div className="">
+              <label htmlFor="stauts" className='form-label'>
+                Register As:
+              </label>
+              <select
+                 name='status' 
+                 value={values.status}
+                 onChange={handleChange}
+                 className='form-select'
+              >
+                {
+                  values.statusOptions.map((itemValue, index) => {
+                    return (
+                      <option key={index} value={itemValue}>
+                        {itemValue}
+                      </option>
+                    )
+                  })
+                }
+              </select>
+            </div>
+            )}
+
             { !values.isMember && (
               <FormRow
               type='text'

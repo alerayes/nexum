@@ -34,10 +34,15 @@ const UserSchema = new mongoose.Schema({
         trim: true,
         default: 'last name',
     },
+    status: {
+        type: String,
+        enum: ['student', 'alumni'],
+        default: 'student'
+    },
     program: {
         type: String,
         minlength: 2,
-        maxlength: 30,
+        maxlength: 100,
         trim: true,
         default: 'program',
     },
