@@ -1037,6 +1037,7 @@ margin:0.5rem;
 } */
 
 
+
 /*Landing page css*/
 
 .thisBody {
@@ -1049,12 +1050,12 @@ margin:0.5rem;
 
 .navLogo {
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
 .landingHeader {
   background-color: #2A3950;
-  height: 80px;
+  height: 100px;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -1180,155 +1181,4 @@ a {
 .hr {
   background-color: #2A3950;
   margin-top: -40px;
-}
-
-/**Profile section **/
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  height: 15vh;
-  padding-left: 3rem;
-}
-.hero-bottom {
-  display: flex;
-  padding-left: 3rem;
-}
-.hero-bottom > img {
-  height:100px;
-  position: relative;
-  top: 30px;
-}
-.detail-email{
-  display: flex;
-}
-.detail-phone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 1rem;
-}
-.hero-section{
-  background: #D9E6E7;
-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-padding:0rem 1rem;
-}
-.hero-top > h2 {
-  height: 24px;
-  width: 245px;
-  left: 120px;
-  top: 159px;
-
-}
-.student-email-section{
-  display: flex;
-  align-items: center;
-  margin-right:1rem;
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height */
-
-
-color: #2A3950;
-}
-.student-phone-section{
-  display: flex;
-  align-items: center;
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height */
-
-
-color: #2A3950;
-}
-.student-phone-section > img {
-  height: 12px;
-  margin-right: 0.5rem;
-}
-.student-email-section > img{
-  height: 12px;
-  margin-right: 0.5rem;
-}
-.linkedin-button{
-  display: flex;
-  justify-content: flex-end;
-  margin: 2rem 0rem;
-}
-
-.connectLinkedIn {
-  width: 262px;
-  height: 48px;
-  background: #2A3950;
-  border-radius: 6px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.main-detail-student{
-  max-width: 1096px;
-    margin: 0 auto;
-}
-.student-work-component{
-  background: #D9E6E7;
-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-padding: 1rem;
-margin-bottom: 2rem;
-}
-.student-work-detail{
-  display: flex;
-}
-.student-work-detail > span{
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 400;
-font-size: 22px;
-line-height: 32px;
-}
-.heading-job {
-  margin: 0px;
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 32px;
-padding-right: 5px;
-}
-.job-poisition-detail-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-}
-.detail-doc-section {
-  margin-bottom: 0px;
-  border-bottom:3px solid #2A3950;
-  max-width: 80%;
-}
-.navigation-section{
-  padding: 1rem;
-}
-.collName-banner{
-  text-align: right;
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 26px;
-margin:10px 0px;
-color: #2A3950;
-}
-.hero-name{
-  font-family: 'Heebo';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 44px;
-color: #2A3950;
 }
