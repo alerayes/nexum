@@ -60,7 +60,7 @@ const UserSchema = new mongoose.Schema({
     isWorking: {
         type: String,
         enum: ['I am open to work', 'I am working in my field'],
-        default: 'no'
+        default: 'I am open to work'
     },
     aboutMe: {
         type: String,
