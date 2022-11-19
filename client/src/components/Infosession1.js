@@ -21,12 +21,12 @@ const Infosession1 = () => {
 
                 <div className="columnFt1Photo">
                     {/* <img src="" alt="Feature 1" /> */}
-                    <img className="ft1Pic" src={ft2Pic} />
+                    <img className="ft1Pic" src={ft2Pic} alt="landing avatar"/>
                     
                 </div>
 
                 <div className="columnFt2Photo">
-                    <img className="ft1Pic" src={ft3Pic} />
+                    <img className="columnFt2Photo" src={ft3Pic} alt="landing avatar" />
                 </div>
                 
                 <div className="columnFt2">
@@ -52,7 +52,7 @@ const Infosession1 = () => {
                 </div>
 
                 <div className="columnFt3Photo">
-                    <img className="ft1Pic" src={ft4Pic} />
+                    <img className="ft1Pic" src={ft4Pic} alt="landing avatar" />
                 </div>
             </div>
         </div>

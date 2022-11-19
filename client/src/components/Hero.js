@@ -9,10 +9,10 @@ const Hero = () => {
                 <button className="chooseBtn">Choose Your Plan</button>
             </div>
             <div>
-                <img className="headPic" src={headerPic} />
+                <img className="headPic" src={headerPic} alt="logo"/>
             </div>
         </div>
-        <hr />
+        
         </>
     );
 }
