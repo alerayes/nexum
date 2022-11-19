@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Avatar from '../../assets/Avatar_D.png'
 import { Link } from "react-router-dom";
+import Footer from '../../component/footer.js'
 
 const StudentList = () => {
   const [users, setUsers] = useState([])
@@ -26,9 +27,10 @@ const StudentList = () => {
    
 
   return (
+    <>
     <div>
       <div className="alumni-list">
-        <h1>Alumni List</h1>
+        <h1>Student List</h1>
         <div className="search-list">
             <input type="text" />
             
@@ -45,7 +47,7 @@ const StudentList = () => {
           </div>
           <div className='fb'>
               <span>Alumni</span> 
-              <h6>Alan riberio cordoso de mellow {user.name}</h6>
+              <h6>{user.name}</h6>
           </div>
           <div className='fb1'>
               <h6>Front End Developer</h6>
@@ -73,6 +75,9 @@ const StudentList = () => {
 
       
     </div>
+    <Footer/>
+    </>
+    
   )
 }
 

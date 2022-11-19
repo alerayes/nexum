@@ -1038,7 +1038,7 @@ margin:0.5rem;
 /*Landing page css*/
 
 .thisBody {
-  background-color: #E5E5E5;
+  background-color: rgb(245,247,249);
 }
 
 .landingImg {
@@ -1061,8 +1061,7 @@ margin:0.5rem;
 .navList {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  padding: 0px;
-
+  padding: 15px;
   align-items: center;
 }
 

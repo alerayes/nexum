@@ -60,17 +60,16 @@ const ProfileDetail = () => {
             </div>
             <div className="about-me">
                 <h4>About Me</h4>
-                <p>I'm Alan, a UX designer with a well-rounded background in communtication, design, UX research and web development. My main area of specialization lie in wireframe and userflow </p>
+                <p>{users.aboutMe} </p>
             </div>
             <div className="student-work-component">
             <div className="student-work-detail">
                 <h4 className='heading-job'>UX Designer </h4> 
-                <span>| Company Name</span>
+                <span>| {users.company}</span>
             </div>
             <div className="student-work-desc">
                 <h4>Desription </h4> 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab voluptatem quo est minus asperiores quos aliquam hic ad eligendi id dolorum reprehenderit dolor atque adipisci repudiandae error, veritatis similique debitis.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab voluptatem quo est minus asperiores quos aliquam hic ad eligendi id dolorum reprehenderit dolor atque adipisci repudiandae error, veritatis similique debitis.
+                <p>{users.aboutMe}
                 </p>
             </div>
             <div className="job-poisition-detail-section">

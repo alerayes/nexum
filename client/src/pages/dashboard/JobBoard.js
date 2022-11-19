@@ -1,6 +1,7 @@
 //import Pop from './JobBoardPopup.js'
 import Popup from '../../components/Popup.js'
 import React , { useEffect,useState } from 'react';
+import Footer from '../../component/footer.js'
 
 const getJobs = async () => {
     let url = `/api/v1/auth/getJobs`;
@@ -24,7 +25,7 @@ const JobBoard = () => {
             }, []);
     //const [name, Setname] = useState(false);
     return ( 
-        
+        <>
         <div className="alumni-list jobBoard-list-comp">
         <h1>Job Board </h1>
         <div className="search-list">
@@ -76,7 +77,10 @@ const JobBoard = () => {
             </ul>    
 
         </div>
+        
         </div>
+         
+        </>
             
         
         
