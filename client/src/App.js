@@ -1,6 +1,6 @@
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import {Register, StudentDashboard, Error,Landing, ProtectedRoute} from './pages'
+import {Register, StudentDashboard, Error,Landing, ProtectedRoute, AdminDashboard} from './pages'
 import {JobBoard, StudentList, Profile, SharedLayout} from './pages/dashboard'
 import ProfileDetail from './components/ProfileDetail';
 
@@ -24,6 +24,7 @@ function App() {
               <Route path='job-board' element={<JobBoard/>}/>
               <Route path='profile' element={<Profile/>}/>
               <Route path='alumni-individual-profile/:id' element={<ProfileDetail/>}/>
+              <Route path='dashboard' element={<AdminDashboard/>}/>
 
             </Route>
             <Route path="/register" element={<Register/>}/>

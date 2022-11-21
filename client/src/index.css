@@ -1416,3 +1416,36 @@ font-size: 30px;
 line-height: 44px;
 color: #2A3950;
 }
+/**Chart Dashboard**/
+.dash-chart{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+grid-gap: 1rem;
+padding: 1rem;
+}
+.chart1{
+  border:1px solid black;
+  padding:1rem;
+  width: 472px;
+height: 383px;
+background: #FFFFFF;
+border: 1.5px solid #000000;
+border-radius: 8px;
+}
+.chart2{
+  border:1px solid black;
+  padding:1rem;
+  width: 472px;
+height: 383px;
+background: #FFFFFF;
+border: 1.5px solid #000000;
+border-radius: 8px;
+}
+.chart3{
+  border:1px solid black;
+  padding:1rem;
+  grid-column: span 2;
+  background: #FFFFFF;
+border: 1.5px solid #000000;
+border-radius: 8px;
+}
