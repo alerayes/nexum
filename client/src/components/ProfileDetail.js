@@ -8,7 +8,7 @@ import navigation from '../assets/navigation.png'
 import frame from '../assets/linkedinlogo.png'
 
 const fetchUsers = async (req_id) => {
-    const res = await fetch(`/api/v1/auth/getUsers/${req_id}`)
+    const res = await fetch(`http://52.52.194.72/backend/api/v1/auth/getUsers/${req_id}`)
     const data = await res.json()
 
     console.log(data)

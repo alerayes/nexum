@@ -10,7 +10,7 @@ export const useJobpost = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('/api/v1/auth/jobPost', {
+        const response = await fetch('http://52.52.194.72/backend/api/v1/auth/jobPost', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({company , location, position, startdate, employmenttype, board, description ,joblink})

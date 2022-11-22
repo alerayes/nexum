@@ -13,15 +13,15 @@ export const data = [
         calc: "stringify",
       },
     ],
-    ["Copper", 8.94, "#b87333", null],
-    ["Silver", 10.49, "silver", null],
-    ["Gold", 19.3, "gold", null],
-    ["Platinum", 21.45, "color: #e5e4e2", null],
+    ["Full-Stack Developer", 8.94, "#b87333", null],
+    ["Sdfc", 10.49, "blue", null],
+    ["Software Engineer", 19.3, "gold", null],
+    ["Consultant", 21.45, "color: #e5e4e2", null],
   ];
   
   export const options = {
-    title: "Density of Precious Metals, in g/cm^3",
-    width: 974,
+    title: "Student/Alumni Courses",
+    width: 900,
     height: 200,
     bar: { groupWidth: "95%" },
     legend: { position: "none" },
@@ -30,9 +30,9 @@ export const data = [
 
 const CourseChart = () => {
     return ( 
-        <Chart
+        <Chart className="cchart"
             chartType="BarChart"
-            width="974px"
+            width="900px"
             height="200px"
             data={data}
             options={options}

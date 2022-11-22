@@ -40,7 +40,7 @@ const AppProvider = ({children}) => {
 
     // axios
     const authFetch = axios.create({
-        baseURL: 'api/v1/',
+        baseURL: 'http://52.52.194.72/backend/api/v1/',
     })
 
     // request
@@ -101,7 +101,7 @@ const AppProvider = ({children}) => {
     const registerUser = async (currentUser) => {
         dispatch({type: REGISTER_USER_BEGIN})
         try {
-            const response = await axios.post('/api/v1/auth/register', currentUser)
+            const response = await axios.post('http://52.52.194.72/backend/api/v1/auth/register', currentUser)
             console.log(response)
             const { user, token } = response.data
             dispatch({
@@ -126,7 +126,7 @@ const AppProvider = ({children}) => {
     const registerJob = async (currentUser) => {
         dispatch({type: JOB_POST_BEGIN})
         try {
-            const response = await axios.post('/api/v1/auth/jobPost', currentUser)
+            const response = await axios.post('http://52.52.194.72/backend/api/v1/auth/jobPost', currentUser)
             console.log(response)
             const { job, token } = response.data
             dispatch({
@@ -151,7 +151,7 @@ const AppProvider = ({children}) => {
     const loginUser = async (currentUser) => {
         dispatch({type: LOGIN_USER_BEGIN})
         try {
-            const response  = await axios.post('/api/v1/auth/login', currentUser)
+            const response  = await axios.post('http://52.52.194.72/backend/api/v1/auth/login', currentUser)
             // console.log(response)
             const { user, token } = response.data
             dispatch({
@@ -181,7 +181,7 @@ const AppProvider = ({children}) => {
     const updateUser = async (currentUser) => {
         dispatch({type: UPDATE_USER_BEGIN})
         try {
-            const {data} = await authFetch.patch('/auth/updateUser', currentUser)
+            const {data} = await authFetch.patch('http://52.52.194.72/backend/auth/updateUser', currentUser)
 
             const {user, token} = data
 
