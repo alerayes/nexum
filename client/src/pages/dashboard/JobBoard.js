@@ -4,7 +4,7 @@ import React , { useEffect,useState } from 'react';
 import Footer from '../../component/footer.js'
 
 const getJobs = async () => {
-    let url = `http://52.52.194.72/backend/api/v1/auth/getJobs`;
+    let url = `https://nexum.wmdd4950.com/backend/api/v1/auth/getJobs`;
     console.log("in code");
     const res = await fetch(url);
     const data = await res.json();

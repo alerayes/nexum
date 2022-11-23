@@ -17,7 +17,7 @@ const StudentList = () => {
 
   // Fetch Users
   const fetchUsers = async () => {
-    const res = await fetch('http://52.52.194.72/backend/api/v1/auth/getUsers')
+    const res = await fetch('https://nexum.wmdd4950.com/backend/api/v1/auth/getUsers')
     const data = await res.json()
 
     console.log(data)
