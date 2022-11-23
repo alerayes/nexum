@@ -1245,6 +1245,7 @@ color: #FFFFFF;
 .contactus-landing>fieldset>input{
   width: 100%;
   border:none;
+  height: 25px;
 }
 fieldset.landing-email {
   grid-column: span 2;
