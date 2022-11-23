@@ -1077,6 +1077,7 @@ a {
   font-size: 16px;
   border-radius: 4px;
   width: 70px;
+  cursor: pointer;
 }
 
 .navList > div{
