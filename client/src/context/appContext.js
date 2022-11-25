@@ -181,7 +181,7 @@ const AppProvider = ({children}) => {
     const updateUser = async (currentUser) => {
         dispatch({type: UPDATE_USER_BEGIN})
         try {
-            const {data} = await authFetch.patch('https://nexum.wmdd4950.com/backend/auth/updateUser', currentUser)
+            const {data} = await authFetch.patch('https://nexum.wmdd4950.com/backend/api/v1/auth/updateUser', currentUser)
 
             const {user, token} = data
 
