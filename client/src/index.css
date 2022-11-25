@@ -1598,19 +1598,7 @@ border-radius: 8px;
   display: grid;
   margin-left: -2rem;
 }
-.profile-form-btn-1{
-  width: 180px;
-  justify-self: end;
 
-  padding: .5rem;
-  border: 1px solid #2A3950;
-  color: #fff;
-  background-color: #2A3950;
-  font-family: 'Heebo', 'sans-serif';
-  font-weight: 500;
-  margin-top: 2.2rem;
-
-}
 
 .form-professional-experience-show{
   display: block;
@@ -1636,3 +1624,16 @@ border-radius: 8px;
   display: grid;
 }
 
+.profile-form-btn-1{
+  width: 180px;
+  justify-self: end;
+
+  padding: .5rem;
+  border: 1px solid #2A3950;
+  color: #fff;
+  background-color: #2A3950;
+  font-family: 'Heebo', 'sans-serif';
+  font-weight: 500;
+  margin-top: 2.2rem;
+  margin-right: 3rem;
+}
