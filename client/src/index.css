@@ -501,6 +501,11 @@ h3{
 .form-row{
   position: relative;
 }
+
+.form-row>input[type='url']{
+  width: 92%;
+  margin-bottom: 2.5rem;
+}
 .form-row>label{
   position: absolute;
   top: 0.2ex;
@@ -518,11 +523,12 @@ h3{
   border: 1px solid #2A3950;;
   border-radius: 6px;
   position: relative;
-  width: 100%;
+  width: 85%;
   margin: 10px;
   line-height: 4.5ex;
   padding-left: 20px;
   font-family: 'Heebo', 'sans-serif';
+  margin-bottom: 1.5rem;
 }
 
 .register-button-wrapper{
@@ -1459,12 +1465,151 @@ border-radius: 8px;
 
 /* Profile Page */
 
+.profile-page-container{
+  margin: 2rem 4%;
+}
+
+.profile-btns-container{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.profile-btn{
+  flex-basis: 33.3%;
+  padding: .875rem;
+  font-family: 'Heebo', sans-serif;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profile-h2{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.form-select-container{
+  position: relative;
+}
+
+.form-select-container>label{
+  position: absolute;
+  top: 0.2ex;
+  z-index: 1;
+  left: 2em;
+  background-color: white;
+  padding: 0 5px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  color:#2A3950;
+  text-transform: capitalize;
+}
+
+.form-select-container>select{
+  border: 1px solid #2A3950;;
+  border-radius: 6px;
+  position: relative;
+  width: 89%;
+  margin: 10px;
+  line-height: 2rem;
+  padding: 0.45rem;
+  padding-left: 20px;
+  font-family: 'Heebo', 'sans-serif';
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.form-select-container>select[name='isWorking']{
+  width: 94%;
+}
+
+.textarea-container{
+  position: relative;
+}
+
+.textarea-container>label{
+  position: absolute;
+  top: 0.2ex;
+  z-index: 1;
+  left: 2em;
+  background-color: white;
+  padding: 0 5px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  color:#2A3950;
+  text-transform: capitalize;
+}
+
+.textarea-container>textarea{
+  border: 1px solid #2A3950;;
+  border-radius: 6px;
+  position: relative;
+  width: 85%;
+  margin: 10px;
+  line-height: 2rem;
+  padding: 0.45rem;
+  padding-left: 20px;
+  font-family: 'Heebo', 'sans-serif';
+  text-transform: capitalize;
+  margin-bottom: 1.2rem;
+}
+/* 
+.textarea-container>textarea[name='jobDescription']{
+  border: 1px solid red;
+  margin-bottom: 0;
+} */
+
 .form-personal-info-show{
   display: block;
 }
 
 .form-personal-info-hide{
   display: none;
+}
+
+.form-personal-info-main-container{
+  display: grid;
+}
+
+.profile-form-btn{
+  width: 180px;
+  justify-self: end;
+  margin-right: 3.5rem;
+  padding: .5rem;
+  border: 1px solid #2A3950;
+  color: #fff;
+  background-color: #2A3950;
+  font-family: 'Heebo', 'sans-serif';
+  font-weight: 500;
+}
+
+.form-profile-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-personal-info-child-2{
+  display: grid;
+  margin-left: -2rem;
+}
+.profile-form-btn-1{
+  width: 180px;
+  justify-self: end;
+
+  padding: .5rem;
+  border: 1px solid #2A3950;
+  color: #fff;
+  background-color: #2A3950;
+  font-family: 'Heebo', 'sans-serif';
+  font-weight: 500;
+  margin-top: 2.2rem;
+
 }
 
 .form-professional-experience-show{
@@ -1474,3 +1619,19 @@ border-radius: 8px;
 .form-professional-experience-hide{
   display: none;
 }
+
+.form-professional-info-main-container{
+  display: grid;
+
+}
+
+.form-professional-info-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .5fr .5fr .5fr;
+}
+
+.form-professional-info-child-2{
+  margin-left: -1.5rem;
+}
+
