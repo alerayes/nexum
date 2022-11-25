@@ -83,11 +83,11 @@ const ProfileDetail = () => {
                 </div>
                 <div className="eType">
                 <h4>Employment Type </h4>
-                <p className='detail-doc-section'>Part-Time Position</p>
+                <p className='detail-doc-section'>{users.employmentType}</p>
                 </div>
                 <div className="yoExp">
                 <h4>Years of Experience </h4>
-                <p className='detail-doc-section'>2 years</p>
+                <p className='detail-doc-section'>{users.yearsOfExperience}</p>
                 </div>
             </div>
             </div>
