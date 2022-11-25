@@ -8,8 +8,17 @@ import 'express-async-errors'
 
 import morgan from 'morgan'
 
+import cors from 'cors'
+app.use(cors());
+
+
+
+
+
 // db and authenticateUser
 import connectDB from './db/connect.js'
+
+
 
 
 // routers
@@ -23,7 +32,7 @@ import errorHandlerMiddleware from './middleware/error-handler.js'
 if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'))
   }
-
+  
 
 app.use(express.json())
 
