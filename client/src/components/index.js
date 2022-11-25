@@ -5,6 +5,7 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import DashboardFooter from "./DashboardFooter"
 import LogoDark from './LogoDark'
+import Button from "./Button"
 
 export{
     FormRow,
@@ -13,5 +14,6 @@ export{
     Navbar,
     Sidebar,
     DashboardFooter,
-    LogoDark
+    LogoDark,
+    Button
 }
