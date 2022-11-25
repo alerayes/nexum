@@ -1,14 +1,14 @@
 //import Pop from './JobBoardPopup.js'
 import Popup from '../../components/Popup.js'
 import React , { useEffect,useState } from 'react';
-import Footer from '../../component/footer.js'
+//import Footer from '../../component/footer.js'
 
 const getJobs = async () => {
     let url = `https://nexum.wmdd4950.com/backend/api/v1/auth/getJobs`;
     console.log("in code");
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
+    console.log(data.position);
     return data;
   };
 
@@ -19,6 +19,7 @@ const JobBoard = () => {
             useEffect(() => {
                 const getTasks = async () => {
                 const jjs = await getJobs();
+                console.log(jjs.position)
                 setJobs(jjs);
                 };
                 getTasks();

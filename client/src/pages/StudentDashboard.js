@@ -3,7 +3,7 @@ import Avatar from '../assets/Avatar_D.png'
 import Footer from '../component/footer'
 import AlumniList from '../components/AlumniList.js'
 import Job from './dashboard/JobBoard.js'
-import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Link, Routes } from "react-router-dom";
 
 const StudentDashboard = () => {
     const data  = JSON.parse(localStorage.getItem('user'));
@@ -59,19 +59,19 @@ const StudentDashboard = () => {
      );
 };
 
-const TestComponent = () => {
-    return (
-        <>
+// const TestComponent = () => {
+//     return (
+//         <>
         
-        <div className="alumni-list">
-        <h1>Alumni List</h1>
-        <div className="search-list">
-            <input type="text" />
-            <button>Search</button>
-        </div>
-        <hr />
-    </div></>
-    )
-}
+//         <div className="alumni-list">
+//         <h1>Alumni List</h1>
+//         <div className="search-list">
+//             <input type="text" />
+//             <button>Search</button>
+//         </div>
+//         <hr />
+//     </div></>
+//     )
+// }
  
 export default StudentDashboard;

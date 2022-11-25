@@ -1,6 +1,6 @@
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import {Register, StudentDashboard, Error,Landing, ProtectedRoute, AdminDashboard} from './pages'
+import {Register,Landing, ProtectedRoute, AdminDashboard} from './pages'
 import {JobBoard, StudentList, Profile, SharedLayout} from './pages/dashboard'
 import ProfileDetail from './components/ProfileDetail';
 

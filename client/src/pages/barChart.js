@@ -1,8 +1,9 @@
-import React ,{useEffect,useState} from "react";
+import React from "react";
 import { Chart } from "react-google-charts";
+import { useEffect,useState } from "react";
 
-
-let bodydata = [];
+   
+    let bodydata = [];
     let countAlumni = 0;
     let countStudent = 0;
     let bodydatafilter;
@@ -16,7 +17,7 @@ let bodydata = [];
       if(check){
         bodydatafilter = bodydata.filter((a) =>{
         check = false;
-        return (a.isWorking === "I am working in my field" ? countAlumni++ : countStudent++)
+        return (a.status === "alumni" ? countAlumni++ : countStudent++)
       })
     }
       console.log('Alumnni = ',countAlumni)
@@ -26,13 +27,19 @@ let bodydata = [];
       return data
     };
 
+    
 
-export const options = {
-  title: "Students/Alumni Employment Rate",
-  pieHole: 0.4,
-  is3D: false,
-};
-const Piechart = () => {
+
+
+  
+  
+  export const options = {
+    chart: {
+      title: "New Users"
+    },
+  };
+
+const Barchart = () => {
 
     const [users, setUsers] = useState([])
 
@@ -43,22 +50,27 @@ const Piechart = () => {
         }
         getUsers()
       }, [])
-
-    const data = [
-        ["Task", "Hours per Day"],
-        ["Working", countAlumni],
-        ["Not Working", countStudent]
+     const data = [
+        ["Year", "Student", "Alumni"],
+        ["2019", 1, 1],
+        ["2020", 2, 2],
+        ["2021", 3, 4],
+        ["2022",countStudent,countAlumni],
       ];
-
     return ( 
+        <>
+        
         <Chart
-      chartType="PieChart"
-      width="100%"
-      height="400px"
-      data={data}
-      options={options}
-    />
+        chartType="Bar"
+        width="100%"
+        height="400px"
+        data={data}
+        options={options}
+      />
+      </>
      );
 }
  
-export default Piechart;
+export default Barchart;
+
+

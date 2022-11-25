@@ -1,20 +1,13 @@
 import React from "react";
-import { Chart } from "react-google-charts";
+//import { useEffect } from "react";
+//import { Chart } from "react-google-charts";
 import Piechart from './AdminDashboardPieChart.js'
 import CourseChart from './CourseChart.js'
-export const data = [
-  ["Year", "Student", "Alumni"],
-  ["2014", 1000, 400],
-  ["2015", 1170, 460],
-  ["2016", 660, 1120],
-  ["2017", 1030, 540],
-];
+import BarChart from './barChart.js'
 
-export const options = {
-  chart: {
-    title: "New Users"
-  },
-};
+
+
+
 
 // export function App() {
 //   return (
@@ -29,13 +22,7 @@ const AdminDashboard = () => {
     <div className="dash-chart">
     
         <div className="chart1">
-            <Chart
-              chartType="Bar"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
+            <BarChart/>
         </div>
         <div className="chart2">
           <Piechart/>

@@ -386,6 +386,9 @@ code {
   justify-content: flex-end;
   
 }
+/* a.nav-link.active{
+  background-color: #4A668F;
+} */
 /** Login **/
 .formSection-login{
   max-width: 650px;

@@ -1,7 +1,7 @@
 //import Header from '../component/header'
 import { Link } from 'react-router-dom'
 import LogoIcon from '../assets/nexum_logo.png'
-import Footer from '../component/footer'
+//import Footer from '../component/footer'
 import Hero from '../components/Hero'
 import Infosession1 from '../components/Infosession1'
 import Infosession2 from '../components/Infosession2'
@@ -13,7 +13,7 @@ const Landing = () => {
     <div className="thisBody">
         <div className="landingHeader">
             <div className="navLogo">
-                <img className="landingImg" src={LogoIcon} />
+                <img className="landingImg" src={LogoIcon} alt="company logo" />
             </div>
 
             <div className="navList">
