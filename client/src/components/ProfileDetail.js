@@ -40,7 +40,7 @@ const ProfileDetail = () => {
                 <h2>Student Profile</h2>
                 <div className="job-detail-banner">
                     <h6 className='collName-banner'>Langara College</h6>
-                    <span> Web and mobile App Design and Development</span>
+                    <span>{users.program}</span>
                 </div>
             </div>
             <div className="hero-bottom">
@@ -49,7 +49,7 @@ const ProfileDetail = () => {
                     <span className='hero-name'>{users.name}</span> <br/>
                     <div className="detail-email">
                         <span className='student-email-section'><img src={email} alt="email" />{users.email}</span> <br />
-                        <span className='student-phone-section'><img src={phone} alt="phone" />+1 6048126881</span>
+                        <span className='student-phone-section'><img src={phone} alt="phone" />+1 {users.phoneNumber}</span>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ const ProfileDetail = () => {
             </div>
             <div className="student-work-component">
             <div className="student-work-detail">
-                <h4 className='heading-job'>UX Designer </h4> 
+                <h4 className='heading-job'>{users.jobTitle} </h4> 
                 <span>| {users.company}</span>
             </div>
             <div className="student-work-desc">
@@ -75,11 +75,11 @@ const ProfileDetail = () => {
             <div className="job-poisition-detail-section">
                 <div className="jPos">
                 <h4>Job Position </h4>
-                <p className='detail-doc-section'>UX Designer</p>
+                <p className='detail-doc-section'>{users.jobTitle}</p>
                 </div>
                 <div className="cName">
                 <h4>Company Name </h4>
-                <p className='detail-doc-section'>Company Name</p>
+                <p className='detail-doc-section'>{users.company}</p>
                 </div>
                 <div className="eType">
                 <h4>Employment Type </h4>

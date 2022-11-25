@@ -46,12 +46,12 @@ const StudentList = () => {
               <img className='alumni-avatar' src={Avatar} alt="default avatar" />
           </div>
           <div className='fb'>
-              <span>Alumni</span> 
+              <span>{user.status}</span> 
               <h6>{user.name}</h6>
           </div>
           <div className='fb1'>
-              <h6>Front End Developer</h6>
-              <span>3 Years of Experience</span>
+              <h6>{user.status === "alumni" ? user.jobTitle : user.program}  </h6>
+              <span>{user.yearsOfExperience} of Experience</span>
           </div>
           <div className='fb2'>
           <Link to={ `alumni-individual-profile/${user._id}` }> <button className="alumni-list-button"  >View Profile</button> </Link>
