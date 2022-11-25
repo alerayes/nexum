@@ -69,7 +69,7 @@ const ProfileDetail = () => {
             </div>
             <div className="student-work-desc">
                 <h4>Desription </h4> 
-                <p>{users.aboutMe}
+                <p>{users.jobDescription}
                 </p>
             </div>
             <div className="job-poisition-detail-section">
