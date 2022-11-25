@@ -735,6 +735,7 @@ h3{
   padding: 1rem 3rem;
   flex-grow: 1;
   background: #F5F7F9;
+  height: 100vh;
 }
 .alumni-list > h1{
   font-size:50px;
