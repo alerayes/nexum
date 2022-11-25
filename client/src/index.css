@@ -1633,5 +1633,6 @@ border-radius: 8px;
 
 .form-professional-info-child-2{
   margin-left: -1.5rem;
+  display: grid;
 }
 
