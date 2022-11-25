@@ -1454,3 +1454,23 @@ border-radius: 8px;
 
 border-radius: 8px;
 }
+
+
+
+/* Profile Page */
+
+.form-personal-info-show{
+  display: block;
+}
+
+.form-personal-info-hide{
+  display: none;
+}
+
+.form-professional-experience-show{
+  display: block;
+}
+
+.form-professional-experience-hide{
+  display: none;
+}
