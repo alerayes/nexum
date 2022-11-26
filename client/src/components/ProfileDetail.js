@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Avatar from '../assets/Avatar_D.png'
 import email from '../assets/Frame.png'
 import phone from '../assets/Vector.png'
-import Footer from '../component/footer.js'
+//import Footer from '../component/footer.js'
 import navigation from '../assets/navigation.png'
 import frame from '../assets/linkedinlogo.png'
 
@@ -94,7 +94,7 @@ const ProfileDetail = () => {
             
         </div>
 
-        <Footer/>
+        
         </>
         
      );
