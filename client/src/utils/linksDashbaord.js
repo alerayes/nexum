@@ -9,7 +9,7 @@ const linksDashbaord = [
     },
     {
         id: 4,
-        text: 'dashboard',
+        text: 'Data Visualization',
         path: 'dashboard',
         // icon:
     },
