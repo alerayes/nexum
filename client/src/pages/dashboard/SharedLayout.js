@@ -1,5 +1,6 @@
 import {Outlet, Link} from 'react-router-dom'
-import {Navbar, Sidebar, DashboardFooter} from  '../../components'
+import {Navbar, Sidebar} from  '../../components'
+import DashboardFooter from "../../component/footer.js";
 
 const SharedLayout = () => {
   return (
@@ -11,7 +12,7 @@ const SharedLayout = () => {
       <div className='dashboard-page'>
         <Outlet/>
       </div>
-      {/* <DashboardFooter/> */}
+      <DashboardFooter/>
     </div>
     </main>
   </> 

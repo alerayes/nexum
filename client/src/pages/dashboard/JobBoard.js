@@ -1,7 +1,7 @@
 //import Pop from './JobBoardPopup.js'
 import Popup from '../../components/Popup.js'
 import React , { useEffect,useState } from 'react';
-//import Footer from '../../component/footer.js'
+import Footer from "../../component/footer.js";
 
 const getJobs = async () => {
     let url = `https://nexum.wmdd4950.com/backend/api/v1/auth/getJobs`;
@@ -49,7 +49,7 @@ const JobBoard = () => {
                                             <>
                 <li key={job._id} >
                     <details>
-                        <summary> {job.position} <span>Posted {job.board === 'today' ? job.board : job.board +' ago'}</span></summary>
+                        <summary> {job.position} <span>Posted {job.board === 'today' ? job.board : job.board +'     ago'}</span></summary>
                         <p className="jobSection">
                                 <span>{job.company}</span>
                                 <span>{job.location}</span>
@@ -80,7 +80,7 @@ const JobBoard = () => {
         </div>
         
         </div>
-         
+        {/* <Footer /> */}
         </>
             
         

@@ -1,5 +1,5 @@
 
-const links = [
+const linksDashbaord = [
     
     {
         id: 1,
@@ -19,7 +19,13 @@ const links = [
         path: 'profile',
         // icon:
     },
+    {
+        id: 4,
+        text: 'dashboard',
+        path: 'dashboard',
+        // icon:
+    },
 ]
 
 
-export default links
+export default linksDashbaord

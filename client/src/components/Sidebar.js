@@ -1,5 +1,6 @@
 import LogoDark from '../components/LogoDark'
 import NavLinks from './NavLinks'
+import { UseAppContext } from '../context/appContext'
 
 const Sidebar = () => {
   return (

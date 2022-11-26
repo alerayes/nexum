@@ -573,6 +573,7 @@ h3{
 .dashboard{
   display: grid;
   grid-template-columns: auto 1fr;
+  background: #F5F7F9;
 }
 
 .dashboard-page{
@@ -735,7 +736,6 @@ h3{
   padding: 1rem 3rem;
   flex-grow: 1;
   background: #F5F7F9;
-  height: 100vh;
 }
 .alumni-list > h1{
   font-size:50px;
@@ -915,6 +915,7 @@ line-height: 24px;
 }
 .jobBoard-list-comp{
   flex-basis:80%;
+  height: 100vh;
 }
 /** JobPostPopup **/
 .popup{
@@ -1468,6 +1469,7 @@ border-radius: 8px;
 
 .profile-page-container{
   margin: 2rem 4%;
+  height: 100vh;
 }
 
 .profile-btns-container{
