@@ -10,7 +10,7 @@ const initialState = {
     password: '',
     lastName: '',
     status: 'student',
-    statusOptions: ['student', 'alumni'],
+    statusOptions: ['student', 'alumni', 'admin'],
     program: '',
     phoneNumber: '',
     isMember: true,
