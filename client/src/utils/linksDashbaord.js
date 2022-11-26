@@ -8,6 +8,12 @@ const linksDashbaord = [
         // icon:
     },
     {
+        id: 4,
+        text: 'dashboard',
+        path: 'dashboard',
+        // icon:
+    },
+    {
         id: 2,
         text: 'job board',
         path: 'job-board',
@@ -19,12 +25,7 @@ const linksDashbaord = [
         path: 'profile',
         // icon:
     },
-    {
-        id: 4,
-        text: 'dashboard',
-        path: 'dashboard',
-        // icon:
-    },
+    
 ]
 
 
