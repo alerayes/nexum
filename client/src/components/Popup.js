@@ -101,11 +101,11 @@ function Popup(props) {
                             <select id="cars" name="cars" onChange={(e) => setBoard(e.target.value)} value={board}>
                                 <option value="Select">-- Select --</option>
                                 <option value="today">Today</option>
-                                <option value="1day">1 day ago</option>
-                                <option value="2day">2 day ago</option>
-                                <option value="3day">3 day ago</option>
-                                <option value="4day">4 day ago</option>
-                                <option value="5day">5 day ago</option>
+                                <option value="1 day">1 day ago</option>
+                                <option value="2 day">2 day ago</option>
+                                <option value="3 day">3 day ago</option>
+                                <option value="4 day">4 day ago</option>
+                                <option value="5 day">5 day ago</option>
                                 <option value="week">Week ago</option>
                             </select>
                             </fieldset>

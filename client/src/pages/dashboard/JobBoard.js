@@ -49,7 +49,7 @@ const JobBoard = () => {
                                             <>
                 <li key={job._id} >
                     <details>
-                        <summary> {job.position} <span>Posted 1 day ago</span></summary>
+                        <summary> {job.position} <span>Posted {job.board === 'today' ? job.board : job.board +' ago'}</span></summary>
                         <p className="jobSection">
                                 <span>{job.company}</span>
                                 <span>{job.location}</span>
