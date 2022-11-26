@@ -4,6 +4,8 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 
+
+
 const UserSchema = new mongoose.Schema({
     name: { 
         type: String,
@@ -36,7 +38,7 @@ const UserSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['student', 'alumni'],
+        enum: ['student', 'alumni', 'admin'],
         default: 'student'
     },
     program: {
