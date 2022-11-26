@@ -2,7 +2,7 @@ import React from "react";
 //import { useEffect } from "react";
 //import { Chart } from "react-google-charts";
 import Piechart from './AdminDashboardPieChart.js'
-import CourseChart from './CourseChart.js'
+//import CourseChart from './CourseChart.js'
 import BarChart from './barChart.js'
 
 
@@ -26,9 +26,6 @@ const AdminDashboard = () => {
         </div>
         <div className="chart2">
           <Piechart/>
-        </div>
-        <div className="chart3">
-          <CourseChart />
         </div>
     </div>
     

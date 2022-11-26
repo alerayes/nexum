@@ -579,6 +579,7 @@ h3{
 .dashboard-page{
   /* width: 90%; */
   margin: 0 auto;
+  padding: 1rem;
   /* padding: 2rem 0; */
 }
 
@@ -787,6 +788,9 @@ height: 48px;
 
 .alumni-avatar{
   height:8vh;
+}
+.alumni-list-detail{
+  height: 100vh;
 }
 .alumni-list-detail > ul{
   margin: 0;
@@ -1435,10 +1439,13 @@ color: #2A3950;
   grid-template-columns: 1fr 1fr;
 grid-gap: 1rem;
 padding: 1rem;
+
+justify-items: center;
+height: 100vh;
 }
 .chart1{
-  border:1px solid black;
-  padding:1rem;
+  /* border:1px solid black; */
+  padding:2rem;
   width: 472px;
 height: 383px;
 background: #FFFFFF;
@@ -1446,8 +1453,8 @@ border: 1.5px solid #000000;
 border-radius: 8px;
 }
 .chart2{
-  border:1px solid black;
-  padding:1rem;
+  /* border:1px solid black; */
+  padding:2rem;
   width: 472px;
 height: 383px;
 background: #FFFFFF;

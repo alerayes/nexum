@@ -1,4 +1,4 @@
-import {Outlet, Link} from 'react-router-dom'
+import {Outlet} from 'react-router-dom'
 import {Navbar, Sidebar} from  '../../components'
 import DashboardFooter from "../../component/footer.js";
 

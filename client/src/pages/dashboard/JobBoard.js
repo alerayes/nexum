@@ -1,7 +1,7 @@
 //import Pop from './JobBoardPopup.js'
 import Popup from '../../components/Popup.js'
 import React , { useEffect,useState } from 'react';
-import Footer from "../../component/footer.js";
+//import Footer from "../../component/footer.js";
 
 const getJobs = async () => {
     let url = `https://nexum.wmdd4950.com/backend/api/v1/auth/getJobs`;

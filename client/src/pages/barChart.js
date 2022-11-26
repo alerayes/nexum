@@ -35,7 +35,8 @@ import { useEffect,useState } from "react";
   
   export const options = {
     chart: {
-      title: "New Users"
+      title: "New Users",
+      
     },
   };
 
