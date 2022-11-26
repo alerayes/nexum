@@ -97,7 +97,7 @@ function Popup(props) {
                             </select>
                             </fieldset>
                             <fieldset>
-                            <legend>Board:</legend>
+                            <legend>Posted Date:</legend>
                             <select id="cars" name="cars" onChange={(e) => setBoard(e.target.value)} value={board}>
                                 <option value="Select">-- Select --</option>
                                 <option value="today">Today</option>
