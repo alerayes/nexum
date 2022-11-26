@@ -14,6 +14,8 @@ const getJobs = async () => {
 
 const JobBoard = () => {
     const [buttonPopup, SetButtonPopup] = useState(false);
+    const [search, setSearch] = useState("");
+    const [filteredUsers, setFilteredUsers] = useState([]);
 
     const [job,setJobs] = useState([]);
             useEffect(() => {
@@ -21,16 +23,38 @@ const JobBoard = () => {
                 const jjs = await getJobs();
                 console.log(jjs.position)
                 setJobs(jjs);
+                setFilteredUsers(jjs);
                 };
                 getTasks();
             }, []);
+    
+    useEffect(() => {
+    
+                if (!search) {
+                  setFilteredUsers(job);
+                  return
+                }
+                setFilteredUsers(
+                    job.filter(
+                    (item) =>
+                      item.position.toLowerCase().indexOf(search.toLocaleLowerCase()) > -1
+                  )
+                );
+                
+        }, [search]);       
+    
     //const [name, Setname] = useState(false);
     return ( 
         <>
         <div className="alumni-list jobBoard-list-comp">
         <h1>Job Board </h1>
         <div className="search-list">
-            <input type="text" />
+        <input
+              type="search"
+              name="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
             
             <button className="search" onClick={() => SetButtonPopup(true) }> Add New Job Post</button>       
         </div>
@@ -41,13 +65,9 @@ const JobBoard = () => {
         <hr />
         <div className="jobList-detail">
             <ul>
-            {
-                                    job.map((job) => {
-                                        console.log(job)
-
-                                        return (
-                                            <>
-                <li key={job._id} >
+            {filteredUsers.length > 0 ? (
+                filteredUsers.map((job) =>(
+                    <li key={job._id} >
                     <details>
                         <summary> {job.position} <span>Posted {job.board === 'today' ? job.board : job.board +'     ago'}</span></summary>
                         <p className="jobSection">
@@ -69,12 +89,14 @@ const JobBoard = () => {
                         
                     </details>
                 </li>
-                                            </>
-                                        )
-                                    })
-                                }
+                ))
+            ): (
+                <div>No Jobs Posting</div>
+            )
                 
-               
+            }
+
+            
             </ul>    
 
         </div>
