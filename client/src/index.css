@@ -384,6 +384,7 @@ code {
 .button-login{
   display: flex;
   justify-content: flex-end;
+  padding: 0.5rem;
   
 }
 /* a.nav-link.active{
@@ -955,7 +956,7 @@ line-height: 24px;
 .popup-inner{
   background: #F5F7F9;
   max-width: 1060px;
-  height:560px;
+  height:580px;
 }
 .JobPopupTitle{
   font-family: 'Heebo';
@@ -1046,6 +1047,7 @@ margin:0.5rem;
   height : 48px;
   color:white;
   border:none;
+  margin: 20px;
 }
 /* summary > ::marker{
   border:1px solid black;
@@ -1649,3 +1651,233 @@ border-radius: 8px;
 }
 
 /*Landing page mv*/
+@media screen and (max-width: 500px){
+  img{
+    width:100%;
+    height:auto;
+  }
+
+  .hero{
+    grid-template-columns: none;
+    max-width: 90%;
+    justify-items: unset;
+  }
+
+  .forMain{
+    max-width: 85%;
+  }
+
+  .landingImg {
+    width: 30%;
+  }
+  .vh {
+    
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      
+  }
+
+  .forMain{
+    grid-template-columns: none;
+  }
+
+  .columnFt3Photo{
+    grid-row: 5;
+  }
+
+  .classFooter{
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
+    margin-top: 2rem;
+    justify-items: unset;
+    padding: 1rem;
+  }
+
+  .classFooter > div{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-area-landing{
+    padding: 0;
+  }
+
+  .contactus-landing {
+    width: 300px;
+    height:unset;
+    grid-template-columns: 1fr;
+  }
+
+  .ft1Pic{
+    max-width: 80%;
+    height: auto;
+
+  }
+
+  .columnFt1{
+    text-align: center;
+  }
+
+  .ft1{
+    padding-top: 2.5rem;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+
+  fieldset.landing-email {
+    grid-column: unset;
+}
+.form-group {
+  background: rgb(245,247,249);
+}
+.register-form {
+  background: rgb(245,247,249);
+  box-shadow:none;
+}
+.button-register{
+  width:300px;
+  border-radius: 6px;
+}
+.register-toggle-button{
+  background: rgb(245,247,249);
+}
+.logo {
+  margin-bottom: 0rem;
+}
+.signUpPara {
+  text-align: left ! important; 
+  padding: 1rem;
+}
+.sidebar-container {
+  width: 0px;
+}
+.alumni-list .search {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.alumni-list-detail > ul>li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+.avatar-img-alumniList {
+  grid-row: span 2;
+}
+.fb {
+  grid-row: span 1;
+    grid-column: span 2;
+}
+.fb1 {
+  grid-column: span 2;
+}
+.fb2{
+  grid-column: 1/-1;
+}
+.alumni-list-button {
+  width: 330px;
+}
+.alumni-avatar {
+  height: auto;
+}
+.alumni-list-detail > ul>li>div>h6 {
+  font-size: 14px;
+}
+.fb1 > span {
+  font-size: 14px;
+}
+.extra-div {
+  width:unset;
+}
+.alumni-list {
+  padding: 0rem;
+}
+.profileNav{
+  width:unset;
+}
+.hero-top > h2{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.collName-banner {
+  text-align: center;
+}
+.hero-section {
+  display: grid;
+    grid-template-columns: 10% 90%;
+}
+.detail-phone {
+  flex-direction: column;
+}
+.student-phone-section > img {
+  width: 12px;
+}
+.detail-email {
+  display: flex;
+  flex-direction: column;
+}
+.connectLinkedIn {
+  width:400px;
+}
+.connectLinkedIn > img {
+  width:unset;
+}
+.dashboard-page {
+  padding: 0rem;
+  height:120vh;
+}
+.main-detail-student {
+  padding: 1rem;
+}
+.linkedin-button {
+  justify-content: center;
+}
+.hero-bottom{
+  grid-column: span 2;
+}
+.hero-bottom > img {
+  width:100px;
+}
+.job-poisition-detail-section {
+  grid-template-columns: 1fr;
+}
+.jobBoard-list-comp{
+  padding: 1rem;
+}
+.jobList-detail >ul>li>details>summary {
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50px;
+}
+.jpos{
+  font-weight: bold;
+}
+.jBord{
+color: rgba(42, 57, 80, 0.6);
+font-size: 14px;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* background: #fff; */
+}
+.dash-chart {
+  grid-template-columns: 1fr;
+
+}
+}

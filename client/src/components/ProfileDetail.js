@@ -32,7 +32,7 @@ const ProfileDetail = () => {
         <>
         <div className="hero-section">
             <div className="navigation-section">
-        <Link to={ `/` }> <img src={navigation} alt="navigation" /> </Link>
+        <Link to={ `/` }> <img className='profileNav' src={navigation} alt="navigation" /> </Link>
         </div>
             <div className="hero-top">
            

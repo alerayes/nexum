@@ -69,7 +69,7 @@ const JobBoard = () => {
                 filteredUsers.map((job) =>(
                     <li key={job._id} >
                     <details>
-                        <summary> {job.position} <span>Posted {job.board === 'today' ? job.board : job.board +'     ago'}</span></summary>
+                        <summary> <span className='jpos'>{job.position}</span> <span className='jBord'>Posted {job.board === 'today' ? job.board : job.board +'     ago'}</span></summary>
                         <p className="jobSection">
                                 <span>{job.company}</span>
                                 <span>{job.location}</span>

@@ -65,7 +65,7 @@ const Register = () => {
       <Logo />
       <form className='register-form' onSubmit={onSubmit}>
           <h3 className='register-header'>{values.isMember ? 'Welcome to Nexum' : 'Create Your Account'}</h3>
-          {!values.isMember && <p>Please insert your information and the password that was sent to you</p>}
+          {!values.isMember && <p className='signUpPara'>Please insert your information and the password that was sent to you</p>}
           {showAlert && <Alert />}
           {/* Name Input */}
           
