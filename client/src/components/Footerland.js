@@ -31,6 +31,7 @@ const Footerland = () => {
                         <fieldset className='landing-email'>
                             <legend>Message:</legend>
                             <textarea rows="4" ></textarea>
+            
                         </fieldset>
                     <div className='button-landing'>
                     <button  className='contactus-landing-button' > Submit</button>
