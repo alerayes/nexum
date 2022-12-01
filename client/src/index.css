@@ -818,6 +818,10 @@ height: 40px;
 
 .alumni-list-detail{
   height: 100vh;
+  overflow: scroll;
+}
+.jobList-detail{
+  overflow: scroll;
 }
 .alumni-list-detail > ul{
   margin: 0;
@@ -1997,3 +2001,7 @@ font-size: 14px;
   margin-top: .75rem;
   margin-left: 1rem;
 }
+/* .partition{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
