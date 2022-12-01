@@ -809,11 +809,23 @@ height: 40px;
 }
 .alumni-list-button{
   border-radius: 6px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   width: 220px;
     height: 48px;
     color:white;
     background: #2A3950;
+    border: 1px solid #2A3950;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+}
+.alumni-list-button:hover{
+  background-color: #4A668F;
+}
+
+.alumni-list-button:active{
+  background-color: white;
+  color: #2A3950;
+  border: 2px solid #2A3950;
 }
 
 .alumni-list-detail{

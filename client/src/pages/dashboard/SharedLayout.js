@@ -12,7 +12,7 @@ const SharedLayout = () => {
       <div className='dashboard-page'>
         <Outlet/>
       </div>
-      <DashboardFooter/>
+      {/* <DashboardFooter/> */}
     </div>
     </main>
   </> 

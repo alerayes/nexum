@@ -13,7 +13,7 @@ const NavLinks = () => {
   return (
     
     <div className='nav-links'>
-      {user.email ==='bhanuj.nagpal@gmail.com' ? linksDashbaord.map((link) => {
+      {user.email ==='langara.admin@langara.ca' ? linksDashbaord.map((link) => {
         const { text, path, id } = link
 
         return (

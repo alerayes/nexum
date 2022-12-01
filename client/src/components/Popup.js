@@ -6,13 +6,13 @@ import success from '../assets/tick.png'
 
 function Popup(props) {
     const [formVisibility, setformVisibility] = useState(true)
-    const [company, setCompany] = useState('Amazon')
-    const [location, setLocation] = useState('Vancouver BC')
+    const [company, setCompany] = useState('Holinova Technology Ltd')
+    const [location, setLocation] = useState('Richmond BC')
     const [position, setPosition] = useState('Software Developer')
     const [startdate, setStartDate] = useState('')
     const [employmenttype, setEmploymentType] = useState('')
     const [board, setBoard] = useState('')
-    const [description, setDescription] = useState('')
+    const [description, setDescription] = useState('Holinova Technology Ltd., established in Vancouver, recently initiated an innovative project to develop a cloud-based platform named Digital Transformation Factory (DXF) to help domestic and global SMB clients to accelerate implementation of cloud-based ERP and extended Industrial IoT while keep the total cost of ownership (TCO) at affordable level, the technology stack essential to the success of this project, consists of codeless programming, AI enabled automated code generation, integrated DevOps, automated test and deployment, hyper converged cloud infrastructure, docker based application hosting, software defined wide area network, and device virtualization. We are looking for a full-time Senior Software Engineer to join our DXF R/D team.')
     const [joblink, setJobLink] = useState('')
     const {jobpost, error, isLoading} = useJobpost()
     // const navigate = useNavigate()
