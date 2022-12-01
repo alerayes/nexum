@@ -86,6 +86,7 @@ const Profile = () => {
     return (
         <div className='profile-page-container'>
 
+            <h2 className='profile-h2'>Personal Information</h2>
             <div className='profile-btns-container'>
                 <Button
                     text={'Personal Information'}
@@ -123,8 +124,8 @@ const Profile = () => {
                     className={`form-personal-info-${showPersonalInfo
                     ? 'show'
                     : 'hide'}`}>
-                    <h2 className='profile-h2'>Personal Information</h2>
-                    {showAlert && <Alert/>}
+      
+                    
 
                     <div className='form-personal-info-main-container'>
                         <div className="form-profile-grid-container">

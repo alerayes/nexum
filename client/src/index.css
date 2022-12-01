@@ -41,7 +41,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 30px;
   margin: 0.67em 0;
 }
 
@@ -390,6 +390,25 @@ code {
 /* a.nav-link.active{
   background-color: #4A668F;
 } */
+
+
+/* alerts */
+.alert {
+  border-color: #2A3950;
+  margin-top: .5rem;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.alert-error {
+  color: #2A3950;
+}
+.alert-success {
+  color: #2A3950;
+}
+/* form */
+
 /** Login **/
 .formSection-login{
   max-width: 650px;
@@ -475,6 +494,7 @@ code {
   margin:0 auto;
   background:#fff; 
   padding: 2rem;
+  padding-top: 0.25rem;
 
 }
 
@@ -555,7 +575,7 @@ h3{
   text-align: center;
   padding-top: 0.875rem;
   font-family: 'Heebo', 'sans-serif';
-  margin-bottom: -0.75rem;
+  margin-bottom: 1rem;
 }
 
 .form-group p {
@@ -569,6 +589,7 @@ h3{
   color: #2A3950;
   font-weight: 700;
 }
+
 
 /* Dashboard - Shared Layout*/
 .dashboard{
@@ -716,7 +737,6 @@ h3{
 .img-avatar{
   border-radius:50%;
   height:5vh;
-
   padding: 0.5rem;
 }
 .img-logo{
@@ -738,9 +758,13 @@ h3{
   padding: 1rem 3rem;
   flex-grow: 1;
   background: #F5F7F9;
+  font-size: 2x;
 }
-.alumni-list > h1{
-  font-size:50px;
+.alumni-list > h2{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  font-size: 30px;
 }
 .search-list{
   display: flex;
@@ -748,7 +772,8 @@ h3{
 }
 .search-list input{
   flex-grow: 1;
-  font-size: 30px;
+  /* height: 2.5rem; */
+  font-size: 20px;
   border: 1px solid rgba(42, 57, 80, 0.7);
   border-radius: 6px;
 }
@@ -763,7 +788,7 @@ hr{
 }
 .alumni-list .search{
   width: 256px;
-height: 48px;
+height: 40px;
   /* width:20%;
   height:50px; */
   color:rgb(41,57,79);
@@ -773,10 +798,14 @@ height: 48px;
   font-size:15px;
   border-radius: 6px;
   border:none;
+}
 
+.alumni-list .search:hover{
+  background-color: #D3EEE2;
 }
 .nav-links > a:hover{
   background-color:  #4A668F;
+  
 }
 .alumni-list-button{
   border-radius: 6px;
@@ -787,9 +816,6 @@ height: 48px;
     background: #2A3950;
 }
 
-.alumni-avatar{
-  height:8vh;
-}
 .alumni-list-detail{
   height: 100vh;
 }
@@ -808,7 +834,7 @@ height: 48px;
 }
 .alumni-list-detail > ul>li>div>h6{
   margin: 0;
-  font-size:18px;
+  font-size:17px;
   line-height: 24px;
 }
 .avatar-img-alumniList{
@@ -828,6 +854,7 @@ height: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  text-transform: capitalize;
 }
 .fb1{
   display: flex;
@@ -878,8 +905,18 @@ height: 48px;
   border-radius: 8px 8px 0px 0px;
 
 }
+
+.jobList-detail >ul>li>details>summary:hover{
+  background: rgba(74, 102, 143, 0.23);
+}
 .jobList-detail >ul>li>details>p>hr{
   margin: 0;
+}
+
+.jobList-detail >ul>li>details>summary>span.jpos{
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  color:#2A3950;
 }
 .companyDetail {
   display: flex;
@@ -1012,6 +1049,9 @@ margin:0.5rem;
 /** button cancel **/
 .Cancel-btn{
   padding: 12px 24px 12px 24px;
+  border: 2px solid #2A3950;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
   width: 158px;
   height: 48px;
   border-radius: 6px;
@@ -1019,15 +1059,34 @@ margin:0.5rem;
   color: #2A3950;
   margin: 0 10px;
 }
+
+.Cancel-btn:hover{
+  text-decoration: underline;
+}
+
 .Post-btn{
   padding: 12px 24px 12px 24px;
   width: 158px;
   height: 48px;
   border-radius: 6px;
+  border: 2px solid #2A3950;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
   background:#2A3950;
   color:white;
   margin-right: 10px;
 }
+
+.Post-btn:hover{
+  background-color: #4A668F ;
+} 
+
+.Post-btn:active{
+  background-color: white;
+  color: #2A3950;
+  border: 2px solid #2A3950;
+}
+
 .success-msg{
   display: flex;
   flex-direction: column;
@@ -1039,20 +1098,36 @@ margin:0.5rem;
   display: flex;
   justify-content: flex-end;
 }
+
+
 .apply-btn > a > button {
   background: #2A3950;
+  border: 2px solid #2A3950;
   border-radius: 6px;
   padding: 12px 24px;
   width : 156px;
   height : 48px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
   color:white;
   border:none;
   margin: 20px;
+}
+
+.apply-btn > a > button:hover{
+  background-color: #4A668F;
+}
+
+.apply-btn > a > button:active{
+  border: 2px solid #2A3950;
+  background-color: white;
+  color: #2A3950;
 }
 /* summary > ::marker{
   border:1px solid black;
 } */
 /*Landing page css*/
+
 
 .thisBody {
   background-color: rgb(245,247,249);
@@ -1504,6 +1579,7 @@ border-radius: 8px;
   margin-top: 2rem;
   margin-left: 1rem;
   margin-bottom: 3rem;
+  font-size: 30px;
 }
 
 .form-select-container{
@@ -1594,11 +1670,22 @@ border-radius: 8px;
   justify-self: end;
   margin-right: 3.5rem;
   padding: .5rem;
-  border: 1px solid #2A3950;
+  border: 2px solid #2A3950;
   color: #fff;
   background-color: #2A3950;
   font-family: 'Heebo', 'sans-serif';
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.profile-form-btn:hover{
+  background-color: #4A668F ;
+  border: 2px solid #4A668F ;
+}
+
+.profile-form-btn:active{
+  background-color: white;
+  border: 2px solid #4A668F ;
+  color: #2A3950;
 }
 
 .form-profile-grid-container{
@@ -1771,6 +1858,7 @@ border-radius: 8px;
   grid-gap: 1rem;
   align-items: center;
 }
+
 .avatar-img-alumniList {
   grid-row: span 2;
 }
@@ -1787,11 +1875,13 @@ border-radius: 8px;
 .alumni-list-button {
   width: 330px;
 }
+
 .alumni-avatar {
   height: auto;
 }
 .alumni-list-detail > ul>li>div>h6 {
   font-size: 14px;
+
 }
 .fb1 > span {
   font-size: 14px;
@@ -1864,9 +1954,9 @@ border-radius: 8px;
   justify-content: space-evenly;
   height: 50px;
 }
-.jpos{
-  font-weight: bold;
-}
+
+
+
 .jBord{
 color: rgba(42, 57, 80, 0.6);
 font-size: 14px;
@@ -1880,4 +1970,30 @@ font-size: 14px;
   grid-template-columns: 1fr;
 
 }
+}
+
+.profile-avatar-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 4px solid #2A3950;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.avatar-profile-details{  
+  align-self: center;
+  height: 60px;
+  width: 60px;
+  margin-top: -.5rem;
+}
+
+.alumni-avatar{
+  width: 6vh;
+  height: 6vh;
+  margin-top: .75rem;
+  margin-left: 1rem;
 }

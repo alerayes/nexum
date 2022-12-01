@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import Avatar from "../../assets/Avatar_D.png";
+import Avatar from "../../assets/Avatar.svg";
 import { Link } from "react-router-dom";
 import Footer from "../../component/footer.js";
 
@@ -62,7 +62,7 @@ const StudentList = () => {
     <>
       <div>
         <div className="alumni-list">
-          <h1>Student List</h1>
+          <h2>Student List</h2>
           <div className="search-list">
             <input
               type="search"

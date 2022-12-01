@@ -71,7 +71,7 @@ const Register = () => {
           
           <div className="form-group">
           { !values.isMember && (
-            <div className="">
+            <div className="form-select-container">
               <label htmlFor="stauts" className='form-label'>
                 Register As:
               </label>

@@ -6,9 +6,9 @@ import success from '../assets/tick.png'
 
 function Popup(props) {
     const [formVisibility, setformVisibility] = useState(true)
-    const [company, setCompany] = useState('')
-    const [location, setLocation] = useState('')
-    const [position, setPosition] = useState('')
+    const [company, setCompany] = useState('Amazon')
+    const [location, setLocation] = useState('Vancouver BC')
+    const [position, setPosition] = useState('Software Developer')
     const [startdate, setStartDate] = useState('')
     const [employmenttype, setEmploymentType] = useState('')
     const [board, setBoard] = useState('')

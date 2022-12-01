@@ -4,7 +4,7 @@ const Alert = () => {
   const { alertType, alertText } = UseAppContext() 
 
   return (
-    <div>{alertText}</div>
+    <div className={`alert alert-${alertType}`}>{alertText}</div>
   )
 }
 export default Alert

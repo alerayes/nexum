@@ -1,6 +1,6 @@
 import React, { useState ,useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom';
-import Avatar from '../assets/Avatar_D.png'
+import Avatar from '../assets/Avatar.svg'
 import email from '../assets/Frame.png'
 import phone from '../assets/Vector.png'
 //import Footer from '../component/footer.js'
@@ -44,7 +44,7 @@ const ProfileDetail = () => {
                 </div>
             </div>
             <div className="hero-bottom">
-                <img src={Avatar} alt="logo" />
+                <div className="profile-avatar-container"><img src={Avatar} alt="logo" className='avatar-profile-details'/></div>
                 <div className="detail-phone">
                     <span className='hero-name'>{users.name}</span> <br/>
                     <div className="detail-email">

@@ -1,3 +1,5 @@
+import StudentListIcon from "../assets/studentlist-icon.svg"
+
 
 const links = [
     
