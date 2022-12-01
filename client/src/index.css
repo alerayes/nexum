@@ -603,6 +603,7 @@ h3{
   margin: 0 auto;
   padding: 1rem;
   /* padding: 2rem 0; */
+  overflow: scroll;
 }
 
 /* Dashboard - Sidebar */
@@ -974,6 +975,10 @@ line-height: 24px;
 .jobBoard-list-comp{
   flex-basis:80%;
   height: 100vh;
+  overflow: scroll;
+}
+.footer-shared{
+  grid-column: span 2;
 }
 /** JobPostPopup **/
 .popup{
@@ -1946,6 +1951,7 @@ border-radius: 8px;
 .dashboard-page {
   padding: 0rem;
   height:120vh;
+
 }
 .main-detail-student {
   padding: 1rem;
