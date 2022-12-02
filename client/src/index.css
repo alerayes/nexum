@@ -614,7 +614,7 @@ h3{
   margin: 0 auto;
   padding: 1rem;
   /* padding: 2rem 0; */
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 /* Dashboard - Sidebar */
@@ -844,10 +844,10 @@ height: 40px;
 
 .alumni-list-detail{
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .jobList-detail{
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .alumni-list-detail > ul{
   margin: 0;
@@ -988,7 +988,7 @@ line-height: 24px;
 .jobBoard-list-comp{
   flex-basis:80%;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .footer-shared{
   grid-column: span 2;
