@@ -571,6 +571,17 @@ h3{
   
 }
 
+.button-register:hover{
+  background-color: #4A668F;
+  border: 1px solid #4A668F;
+}
+
+.button-register:active{
+  background-color: white;
+  color:#2A3950;
+  border: 2px solid #2A3950;
+}
+
 .register-form p{
   text-align: center;
   padding-top: 0.875rem;
@@ -794,12 +805,13 @@ height: 40px;
   height:50px; */
   color:rgb(41,57,79);
   background-color: #AAF0D8;;
+  border: 1px solid #AAF0D8;
   margin-left:20px;
   font-weight:bold;
   font-size:15px;
   border-radius: 6px;
   /* border:none; */
-  border: 0.8px solid black;
+
 }
 
 .alumni-list .search:hover{
@@ -1185,13 +1197,24 @@ a {
 }
 
 .lgBtn {
-  background-color: #D3EEE2;
+  background-color: #AAF0D8;
   border: none;
-  height: 29px;
+  padding: .5rem;
+  font-family: 'Heebo', sans-serif;
+  color: #2A3950;
+  font-weight: 500;
   font-size: 16px;
   border-radius: 4px;
-  width: 70px;
+  width: 120px;
   cursor: pointer;
+}
+
+.lgBtn:hover{
+  background-color: #D3EEE2;
+}
+
+.lgBtn:active{
+  border: 2px solid #1B7A72;
 }
 
 .navList > div{
@@ -1464,6 +1487,7 @@ color: #2A3950;
   width: 262px;
   height: 48px;
   background: #2A3950;
+  border: none;
   border-radius: 6px;
   color: white;
   display: flex;
@@ -1471,6 +1495,11 @@ color: #2A3950;
   align-items: center;
   gap: 8px;
 }
+
+.connectLinkedIn:hover{
+  background-color: #4A668F;
+}
+
 
 .main-detail-student{
   max-width: 1096px;
@@ -1852,6 +1881,7 @@ border-radius: 8px;
   width:300px;
   border-radius: 6px;
 }
+
 .register-toggle-button{
   background: rgb(245,247,249);
 }
