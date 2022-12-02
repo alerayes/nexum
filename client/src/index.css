@@ -798,7 +798,8 @@ height: 40px;
   font-weight:bold;
   font-size:15px;
   border-radius: 6px;
-  border:none;
+  /* border:none; */
+  border: 0.8px solid black;
 }
 
 .alumni-list .search:hover{
