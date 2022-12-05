@@ -525,7 +525,7 @@ h3{
 
 .form-row>input[type='url']{
   width: 92%;
-  border:1px solid black;
+  /* border:1px solid black; */
   margin-bottom: 2.5rem;
 }
 .form-row>label{
